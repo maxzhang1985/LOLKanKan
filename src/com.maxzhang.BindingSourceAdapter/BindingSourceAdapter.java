@@ -55,6 +55,11 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 		
 		for(Field field : fields)
 		{
+            String controlAndFieldsName = field.getName();
+            int resID = res.getIdentifier(controlAndFieldsName,"id",_context.getPackageName());
+            if(resID == 0)
+                continue;
+
 			Object result = null;
 			String resultString = null;
 			Annotation  bindAnnotation = field.getAnnotation(DataField.class);
@@ -67,11 +72,10 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 				resultString =  result == null ? "" : result.toString();
 				
 				Map<String, View> parentViewMap = mParentViews.get(view);
-				String controlAndFieldsName = field.getName();
+
 				View childView = parentViewMap.get(controlAndFieldsName);
 				
 				if(childView == null){
-					int resID = res.getIdentifier(controlAndFieldsName,"id",_context.getPackageName());
 					Log.i("msg", controlAndFieldsName);
 					childView = (TextView)view.findViewById(resID);
 					parentViewMap.put(controlAndFieldsName, childView);

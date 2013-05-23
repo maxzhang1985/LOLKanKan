@@ -6,8 +6,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import com.maxzhang.BindingSourceAdapter.BindingSourceAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyActivity extends ListActivity {
+
+    private BindingSourceAdapter<VideoInfo> bindingSourceAdapter = null;
+
     /**
      * Called when the activity is first created.
      */
@@ -16,34 +23,24 @@ public class MyActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        List<VideoInfo> videos = new ArrayList<VideoInfo>();
+        bindingSourceAdapter =  new BindingSourceAdapter<VideoInfo>(this,R.layout.listitem,videos);
+        this.setListAdapter(bindingSourceAdapter);
+
         Button btnAdd = (Button)findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(Hander);
-
     }
 
 
-    View.OnClickListener Hander = new View.OnClickListener() {
+   private View.OnClickListener Hander = new View.OnClickListener() {
+       @Override
+       public void onClick(View v) {
+           AsyncHtmlRequestTask task = new AsyncHtmlRequestTask(MyActivity.this);
+           task.execute("http://lol.178.com/list/video.html");
+       }
+   };
 
-        public void onClick(View v) {
 
-
-            AsyncHtmlRequestTask task = new AsyncHtmlRequestTask();
-            task.execute("http://lol.178.com/list/video.html");
-
-
-            // TODO Auto-generated method stub
-            //UserInfo u3 = new UserInfo();
-            //u3.setName1("1");
-            //u3.setName2("2");
-            //users.add(u3);
-            //users.add(u4);
-            //Random random = new Random();
-            //String name = String.valueOf(random.nextLong());
-            //users.get(1).setName1(name);
-            //adapter.add(u4);
-            //adapter.notifyDataSetInvalidated();
-        }
-    };
 
 
     @Override

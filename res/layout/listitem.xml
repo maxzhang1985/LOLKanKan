@@ -5,12 +5,12 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/name1"
+        android:id="@+id/Title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/name2"
+        android:id="@+id/Url"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
