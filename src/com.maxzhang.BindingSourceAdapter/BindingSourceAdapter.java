@@ -23,7 +23,11 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 	private List<T> _source;
 	private Context _context;
 	private int _resourceID;
-    private final WeakHashMap<View, Map<String,View>> mParentViews = new WeakHashMap<View, Map<String,View>>();  
+    private final WeakHashMap<View, Map<String,View>> mParentViews = new WeakHashMap<View, Map<String,View>>();
+    private boolean mBusy = false;
+
+
+
 
 	public BindingSourceAdapter(Context context, int resourceID ,List<T> source)
 	{
