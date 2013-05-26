@@ -1,8 +1,8 @@
-package com.maxzhang.lolkankan.cache;
+package com.maxzhang.BindingSourceAdapter.cache;
 
 import java.io.File;
 
-import  com.maxzhang.lolkankan.util.FileHelper;
+import  com.maxzhang.BindingSourceAdapter.util.FileHelper;
 
 import android.content.Context;
 import android.util.Log;

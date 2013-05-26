@@ -1,4 +1,4 @@
-package com.maxzhang.lolkankan.util;
+package com.maxzhang.BindingSourceAdapter.util;
 
 
 public class FileManager {
