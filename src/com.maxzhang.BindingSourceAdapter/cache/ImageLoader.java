@@ -28,7 +28,7 @@ public class ImageLoader {
 	private AbstractFileCache fileCache;
 	private Map<ImageView, String> imageViews = Collections
 			.synchronizedMap(new WeakHashMap<ImageView, String>());
-	// �̳߳�
+    // 线程池
 	private ExecutorService executorService;
 
 	public ImageLoader(Context context) {
@@ -36,17 +36,17 @@ public class ImageLoader {
 		executorService = Executors.newFixedThreadPool(5);
 	}
 
-	// ����Ҫ�ķ���
+    // 最主要的方法
 	public void DisplayImage(String url, ImageView imageView, boolean isLoadOnlyFromCache) {
 		imageViews.put(imageView, url);
-		// �ȴ��ڴ滺���в���
+        // 先从内存缓存中查找
 
 		Bitmap bitmap = memoryCache.get(url);
 		if (bitmap != null)
 			imageView.setImageBitmap(bitmap);
 		else if (!isLoadOnlyFromCache){
-			
-			// ��û�еĻ��������̼߳���ͼƬ
+
+            // 若没有的话则开启新线程加载图片
 			queuePhoto(url, imageView);
 		}
 	}
@@ -58,8 +58,8 @@ public class ImageLoader {
 
 	private Bitmap getBitmap(String url) {
 		File f = fileCache.getFile(url);
-		
-		// �ȴ��ļ������в����Ƿ���
+
+        // 先从文件缓存中查找是否有
 		Bitmap b = null;
 		if (f != null && f.exists()){
 			b = decodeFile(f);
@@ -67,7 +67,7 @@ public class ImageLoader {
 		if (b != null){
 			return b;
 		}
-		// ����ָ����url������ͼƬ
+        // 最后从指定的url中下载图片
 		try {
 			Bitmap bitmap = null;
 			URL imageUrl = new URL(url);
@@ -88,7 +88,7 @@ public class ImageLoader {
 		}
 	}
 
-	// decode���ͼƬ���Ұ����������Լ����ڴ���ģ�������ÿ��ͼƬ�Ļ����СҲ�������Ƶ�
+    // decode这个图片并且按比例缩放以减少内存消耗，虚拟机对每张图片的缓存大小也是有限制的
 	private Bitmap decodeFile(File f) {
 		try {
 			// decode image size
@@ -145,18 +145,18 @@ public class ImageLoader {
 			if (imageViewReused(photoToLoad))
 				return;
 			BitmapDisplayer bd = new BitmapDisplayer(bmp, photoToLoad);
-			// ���µĲ�������UI�߳���
+            // 更新的操作放在UI线程中
 			Activity a = (Activity) photoToLoad.imageView.getContext();
 			a.runOnUiThread(bd);
 		}
 	}
 
-	/**
-	 * ��ֹͼƬ��λ
-	 * 
-	 * @param photoToLoad
-	 * @return
-	 */
+    /**
+     * 防止图片错位
+     *
+     * @param photoToLoad
+     * @return
+     */
 	boolean imageViewReused(PhotoToLoad photoToLoad) {
 		String tag = imageViews.get(photoToLoad.imageView);
 		if (tag == null || !tag.equals(photoToLoad.url))
@@ -164,7 +164,7 @@ public class ImageLoader {
 		return false;
 	}
 
-	// ������UI�߳��и��½���
+    // 用于在UI线程中更新界面
 	class BitmapDisplayer implements Runnable {
 		Bitmap bitmap;
 		PhotoToLoad photoToLoad;

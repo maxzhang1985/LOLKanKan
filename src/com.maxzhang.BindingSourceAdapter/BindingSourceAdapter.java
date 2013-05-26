@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import com.maxzhang.BindingSourceAdapter.cache.ImageLoader;
+import com.maxzhang.BindingSourceAdapter.util.ViewBinderFactory;
 
 
 public class BindingSourceAdapter<T> extends ArrayAdapter<T> 
@@ -25,9 +27,17 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 	private int _resourceID;
     private final WeakHashMap<View, Map<String,View>> mParentViews = new WeakHashMap<View, Map<String,View>>();
     private boolean mBusy = false;
+    ViewBinderFactory viewBinder ;
 
+    public void setFlagBusy(boolean busy) {
+        this.mBusy = busy;
+    }
 
-
+    public void clearCache()
+    {
+        if(viewBinder!=null)
+            viewBinder.clearCache();
+    }
 
 	public BindingSourceAdapter(Context context, int resourceID ,List<T> source)
 	{
@@ -35,7 +45,8 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 		_context=context;
 		_source = source;
 		_resourceID = resourceID;
-		_inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);  
+		_inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        viewBinder = new ViewBinderFactory(context);
 	}
 	
 	
@@ -66,7 +77,7 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 
 			Object result = null;
 			String resultString = null;
-			Annotation  bindAnnotation = field.getAnnotation(DataField.class);
+			DataField  bindAnnotation = (DataField)field.getAnnotation(DataField.class);
 			if(bindAnnotation!=null)
 			{
 				try {
@@ -81,12 +92,13 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 				
 				if(childView == null){
 					Log.i("msg", controlAndFieldsName);
-					childView = (TextView)view.findViewById(resID);
+					childView = view.findViewById(resID);
 					parentViewMap.put(controlAndFieldsName, childView);
 				}
 				
 				Log.i(controlAndFieldsName, resultString);
-				((TextView)childView).setText(resultString);
+
+                viewBinder.dataBinding(childView,result,mBusy,bindAnnotation.View());
 			}
 			
 		}

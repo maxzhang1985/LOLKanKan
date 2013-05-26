@@ -1,6 +1,7 @@
 package com.maxzhang.lolkankan;
 
 import com.maxzhang.BindingSourceAdapter.*;
+import com.maxzhang.BindingSourceAdapter.util.ViewDefined;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +14,7 @@ public class VideoInfo {
     @DataField
     public String Url;
 
-    @DataField
+    @DataField(View= ViewDefined.RemoteImage)
     public String ImageUrl;
 
     @DataField

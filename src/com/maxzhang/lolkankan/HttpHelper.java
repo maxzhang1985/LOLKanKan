@@ -25,7 +25,7 @@ public class HttpHelper {
         return html;
     }
 
-    public static byte[] readFromInput(InputStream inStream) throws Exception {
+    private static byte[] readFromInput(InputStream inStream) throws Exception {
         ByteArrayOutputStream outStream = new ByteArrayOutputStream();
         byte[] buffer = new byte[1024];
         int len = 0;
