@@ -25,14 +25,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="599ea65b-6574-4799-8720-ec403b650af2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java" afterPath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="com.maxzhang.lolkankan.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/res/values/strings.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369279151945" ignored="false" />
-    <file path="/Dummy.txt" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369660996229" ignored="false" />
+    <file path="/Dummy.txt" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369664823056" ignored="false" />
     <file path="/BindingSourceAdapter.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369556949635" ignored="false" />
     <file path="/DataField.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369553370574" ignored="false" />
     <file path="/VideoInfo.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369554918417" ignored="false" />
@@ -121,7 +119,7 @@
       <file leaf-file-name="AsyncHtmlRequestTask.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="13" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.7531083">
+            <state line="119" column="34" selection-start="2771" selection-end="2771" vertical-scroll-proportion="0.858156">
               <folding>
                 <element signature="e#1017#1025#0" expanded="true" />
                 <element signature="e#1087#1098#0" expanded="true" />
@@ -359,7 +357,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -595,14 +593,18 @@
       <created>1369558078172</created>
       <updated>1369558078173</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="更新Async Next Page">
+      <created>1369664831375</created>
+      <updated>1369664831375</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32853982" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -623,8 +625,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24305555" sideWeight="0.670354" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32964602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24305555" sideWeight="0.67146015" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.670354" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -676,7 +678,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="bindingsourceAdapter" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新Async Next Page" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -691,6 +693,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="bindingsourceAdapter" />
+    <MESSAGE value="更新Async Next Page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -700,11 +703,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://F:/Android/adt-bundle-windows-x86_64-20130514/sdk/platforms/android-17/android.jar!/android/widget/ListView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="19" selection-start="4329" selection-end="4329" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com.maxzhang.BindingSourceAdapter/cache/FileCache.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
@@ -821,7 +819,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="13" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.7531083">
+        <state line="119" column="34" selection-start="2771" selection-end="2771" vertical-scroll-proportion="0.858156">
           <folding>
             <element signature="e#1017#1025#0" expanded="true" />
             <element signature="e#1087#1098#0" expanded="true" />
@@ -870,7 +868,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Android SDK</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -906,6 +904,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>reflectasm-1.05-all</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
