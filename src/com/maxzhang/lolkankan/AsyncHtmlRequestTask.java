@@ -32,12 +32,21 @@ public class AsyncHtmlRequestTask extends AsyncTask<String, Integer, String>
     public AsyncHtmlRequestTask(ListActivity context)
     {
         listActivity = context;
-
+        isComplete = false;
+        index = 1;
     }
+
 
 
     private List<String> pageList = new ArrayList<String>();
     private ArrayList<VideoInfo> videoList = new ArrayList<VideoInfo>();
+    private boolean isComplete = false;
+
+    private void addPageList(String pageString)
+    {
+        if(!pageList.contains(pageString))
+            pageList.add(pageString);
+    }
 
     private void saveFile(String result){
         File root = new File(Environment.getExternalStorageDirectory(), "Notes");
@@ -61,30 +70,68 @@ public class AsyncHtmlRequestTask extends AsyncTask<String, Integer, String>
 
     }
 
+
+    public List<String> getPageList()
+    {
+        return pageList;
+    }
+
+    public int getPageIndex()
+    {
+        return index;
+
+    }
+
+    public void Rest()
+    {
+        index = 1;
+        pageList.clear();
+        videoList.clear();
+    }
+
+    private int index;
+
     @Override
     protected String doInBackground(String... params) {
+        String httpUrl ="";
+        if(params.length <= 0 )
+        {
+            int pageCount = pageList.size();
+            if(pageCount > index){
+                httpUrl = pageList.get(index);
+                index++;
+            }
+            else
+            {
+                return "";
+            }
+
+        }
+        else{
+            httpUrl = params[0];
+        }
+        isComplete = false;
         String strResult = "";
-        String httpUrl = params[0];
+
+        this.addPageList(httpUrl);
         try {
             strResult = HttpHelper.getHtmlCode(httpUrl);
             Log.v("log",strResult);
 //            saveFile(strResult);
         } catch (Exception e) {
-            // TODO Auto-generated catch block
-            //Log.e("error",e.getMessage());
-            System.out.print(e.getMessage());
+            Log.e("error",e.getMessage());
         }
         int postion = httpUrl.indexOf(".html");
         String match = httpUrl.substring(0,postion) + "_\\d*" + httpUrl.substring(postion);
         Log.v(match, "log");
         Pattern pattern = Pattern.compile(match);
         Matcher matcher = pattern.matcher(strResult);
+
         while(matcher.find())
         {
-
             String s= matcher.group();
             Log.v(s,"log");
-            pageList.add(s);
+            this.addPageList(s);
         }
 
         String match1 = "<dt><a href=\"(.*?)\".*title=\"(.*?)\".*background-image:[\\s]*url\\(\\'(.*?)\\'\\);\"><span>(.*)</span>[\\s]*(<strong>(.*)</strong>)?";
@@ -108,11 +155,14 @@ public class AsyncHtmlRequestTask extends AsyncTask<String, Integer, String>
 
     @Override
     protected void onPostExecute(String s) {
-
+        if(s.equals(""))
+            return;
 
         BindingSourceAdapter<VideoInfo> adapter = (BindingSourceAdapter<VideoInfo>)listActivity.getListAdapter();
         adapter.addAll(this.videoList);
         adapter.notifyDataSetChanged();
+        this.videoList.clear();
+        isComplete = true;
         super.onPostExecute(s);    //To change body of overridden methods use File | Settings | File Templates.
     }
 }

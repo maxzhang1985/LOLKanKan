@@ -28,8 +28,10 @@ public class MyActivity extends ListActivity {
 
     }
 
+    private List<VideoInfo> videos = new ArrayList<VideoInfo>();
+
     private void setupViews() {
-        List<VideoInfo> videos = new ArrayList<VideoInfo>();
+
         bindingSourceAdapter =  new BindingSourceAdapter<VideoInfo>(this,R.layout.listitem,videos);
         this.setListAdapter(bindingSourceAdapter);
 
