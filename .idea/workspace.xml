@@ -28,32 +28,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="599ea65b-6574-4799-8720-ec403b650af2" name="Default" comment="">
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\.idea\libraries\vitamio.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\.idea\libraries\vitamiobundle.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\BindingSourceAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\DataField.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\cache\AbstractFileCache.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\cache\FileCache.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\cache\ImageLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\cache\MemoryCache.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\util\CommonLog.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\util\CommonUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\util\FileHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\util\FileManager.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\util\IValueConverter.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\util\LogFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\util\ViewBinderFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\src\com.maxzhang.BindingSourceAdapter\util\ViewDefined.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/maxzhang/lolkankan/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/maxzhang/lolkankan/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/VideoPlayActivity.java" afterPath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/VideoPlayActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.maxzhang.lolkankan.iml" afterPath="$PROJECT_DIR$/com.maxzhang.lolkankan.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/pinyin4j_2_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/pinyin4j_2_5_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/cache/AbstractFileCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/CommonLog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/CommonUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/DataField.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/cache/FileCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/FileHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/FileManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/IValueConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/cache/ImageLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/LogFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/cache/MemoryCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/ViewBinderFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/ViewDefined.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lint.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="com.maxzhang.lolkankan.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369722829744" ignored="false" />
+    <file path="/Dummy.txt" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369723254199" ignored="false" />
     <file path="/BindingSourceAdapter.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369556949635" ignored="false" />
     <file path="/DataField.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369553370574" ignored="false" />
     <file path="/VideoInfo.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369554918417" ignored="false" />
@@ -160,7 +154,7 @@
       <file leaf-file-name="BindingSourceAdapter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="13" selection-start="679" selection-end="679" vertical-scroll-proportion="0.16851442">
+            <state line="34" column="0" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.71302426">
               <folding />
             </state>
           </provider>
@@ -568,14 +562,18 @@
       <created>1369717846512</created>
       <updated>1369717846512</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="更新">
+      <created>1369723262104</created>
+      <updated>1369723262104</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32681563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -594,8 +592,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24281609" sideWeight="0.6703911" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24281609" sideWeight="0.67318434" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283046" sideWeight="0.67224544" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -762,7 +760,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="679" selection-end="679" vertical-scroll-proportion="0.16851442">
+        <state line="34" column="0" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.71302426">
           <folding />
         </state>
       </provider>
