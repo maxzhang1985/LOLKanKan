@@ -15,6 +15,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="vitamiobundle" level="project" />
+    <orderEntry type="library" name="pinyin4j-2.5.0" level="project" />
+    <orderEntry type="library" name="vitamio" level="project" />
   </component>
 </module>
 

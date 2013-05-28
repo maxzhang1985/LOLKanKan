@@ -2,6 +2,7 @@ package com.maxzhang.lolkankan;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -95,7 +96,8 @@ public class MyActivity extends ListActivity {
     @Override
     protected void onListItemClick(android.widget.ListView l, android.view.View v, int position, long id) {
         //Log.i("msg",this.items[position]);
-
+        Intent i = new Intent(this,VideoPlayActivity.class);
+        startActivity(i);
     }
 
 
