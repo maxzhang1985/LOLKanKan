@@ -25,7 +25,7 @@ public class VideoPlayActivity extends Activity {
         setContentView(R.layout.videoplay);
 
         Log.v("log", "start");
-//        if (!io.vov.vitamio.LibsChecker.checkVitamioLibs(this, "com.yixia.test.VideoViewDemo", R.string.init, R.raw.libvinit))
+//        if (!io.vov.vitamio.LibsChecker.checkVitamioLibs(this, getClass().getName(), R.string.init, R.raw.libarm))
 //          return;
         Log.v("log", "checked");
 

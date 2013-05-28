@@ -2,6 +2,7 @@
   <library name="pinyin4j-2.5.0">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../Vitamio_new/VitamioBundle/libs/pinyin4j-2.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Vitamio_new/VitamioBundle/libs/vitamio.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
