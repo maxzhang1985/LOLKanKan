@@ -35,10 +35,11 @@
                 android:launchMode="singleTop"
                 android:theme="@android:style/Theme.NoTitleBar"
                 android:windowSoftInputMode="stateAlwaysHidden" />
-
+        <!--android:theme="@android:style/Theme.Holo.Light"-->
         <activity android:name="com.maxzhang.lolkankan.MyActivity"
 
-                  >
+                >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
