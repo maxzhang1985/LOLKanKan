@@ -3,7 +3,7 @@
   <component name="AndroidDesignerProfile">
     <option name="fullProfile">
       <profile>
-        <option name="device" value="4in WVGA (Nexus S)" />
+        <option name="device" value="3.7in WVGA (Nexus One)" />
         <option name="deviceConfiguration" value="Portrait" />
         <option name="targetHashString" value="android-17" />
         <option name="theme" value="Theme" />
@@ -23,49 +23,55 @@
       </GlobalState>
     </option>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="log" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="599ea65b-6574-4799-8720-ec403b650af2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/cache/AbstractFileCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/CommonLog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/CommonUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/DataField.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/cache/FileCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/FileHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/FileManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/IValueConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/cache/ImageLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/LogFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/cache/MemoryCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/ViewBinderFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/ViewDefined.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lint.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/FindVideoPlayTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/android_support_v4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com.maxzhang.lolkankan.eml" />
+      <change type="DELETED" beforePath="F:\开源\Android\LOLKanKan\.idea\libraries\vitamiobundle.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java" afterPath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java" afterPath="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/HttpHelper.java" afterPath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/HttpHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/VideoPlayActivity.java" afterPath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/VideoPlayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.maxzhang.lolkankan.iml" afterPath="$PROJECT_DIR$/com.maxzhang.lolkankan.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/listitem.xml" afterPath="$PROJECT_DIR$/res/layout/listitem.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/pinyin4j_2_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/pinyin4j_2_5_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="com.maxzhang.lolkankan.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369723254199" ignored="false" />
-    <file path="/BindingSourceAdapter.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369556949635" ignored="false" />
+    <file path="/Dummy.txt" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369803882751" ignored="false" />
+    <file path="/BindingSourceAdapter.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369817939447" ignored="false" />
     <file path="/DataField.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369553370574" ignored="false" />
     <file path="/VideoInfo.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369554918417" ignored="false" />
-    <file path="/AsyncHtmlRequestTask.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369664702991" ignored="false" />
+    <file path="/AsyncHtmlRequestTask.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369818874682" ignored="false" />
     <file path="/fragment.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369295261215" ignored="false" />
     <file path="/a.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369300889425" ignored="false" />
-    <file path="/MyActivity.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369711177384" ignored="false" />
+    <file path="/MyActivity.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369819580750" ignored="false" />
     <file path="/Album.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369319965853" ignored="false" />
     <file path="/HttpHelper.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369551568289" ignored="false" />
     <file path="/CommonUtil.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369551612782" ignored="false" />
     <file path="/ViewDefined.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369552583092" ignored="false" />
     <file path="/IValueConverter.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369552905394" ignored="false" />
     <file path="/ViewBinderFactory.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369556783274" ignored="false" />
-    <file path="/VideoPlayActivity.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369720732824" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369709182289" ignored="false" />
+    <file path="/VideoPlayActivity.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369804058080" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369805195871" ignored="false" />
     <file path="/strings.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369710531488" ignored="false" />
     <file path="/VideoViewDemo.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369714369845" ignored="false" />
-    <file path="$PROJECT_DIR$/bin/AndroidManifest.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369722526707" ignored="false" />
+    <file path="$PROJECT_DIR$/../ZI-master/gen/com/yixia/zi/BuildConfig.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369804676117" ignored="false" />
+    <file path="/main.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369806026937" ignored="false" />
+    <file path="/listitem.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369806901488" ignored="false" />
+    <file path="/bitmaps.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369807337811" ignored="false" />
+    <file path="/background.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369807644952" ignored="false" />
+    <file path="/backgroundr.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369811579099" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +123,38 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java" line="99" class="com.maxzhang.lolkankan.AsyncHtmlRequestTask" package="com.maxzhang.lolkankan">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java" line="163" class="com.maxzhang.lolkankan.AsyncHtmlRequestTask" package="com.maxzhang.lolkankan">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -131,32 +168,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="29" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.0">
+            <state line="84" column="69" selection-start="3044" selection-end="3044" vertical-scroll-proportion="0.7184035">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoPlayActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/VideoPlayActivity.java">
+      <file leaf-file-name="AsyncHtmlRequestTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="51" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
+            <state line="163" column="0" selection-start="4159" selection-end="4159" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#saveFile#0;class#AsyncHtmlRequestTask#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BindingSourceAdapter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java">
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.71302426">
+            <state line="16" column="0" selection-start="691" selection-end="691" vertical-scroll-proportion="-10.857142">
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="backgroundr.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable/backgroundr.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="32" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listitem.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/listitem.xml">
+          <provider editor-type-id="text-editor">
+            <state line="3" column="29" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -179,22 +240,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/HttpHelper.java" />
-        <option value="$PROJECT_DIR$/src/com.maxzhang.BindingSourceAdapter/util/CommonUtil.java" />
-        <option value="$PROJECT_DIR$/src/com.maxzhang.BindingSourceAdapter/util/ViewDefined.java" />
-        <option value="$PROJECT_DIR$/src/com.maxzhang.BindingSourceAdapter/util/IValueConverter.java" />
-        <option value="$PROJECT_DIR$/src/com.maxzhang.BindingSourceAdapter/DataField.java" />
-        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/VideoInfo.java" />
-        <option value="$PROJECT_DIR$/res/layout/listitem.xml" />
-        <option value="$PROJECT_DIR$/src/com.maxzhang.BindingSourceAdapter/util/ViewBinderFactory.java" />
-        <option value="$PROJECT_DIR$/src/com.maxzhang.BindingSourceAdapter/BindingSourceAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/videoplay.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java" />
         <option value="$PROJECT_DIR$/../Vitamio_new/Test/src/com/yixia/test/VideoViewDemo.java" />
         <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/VideoPlayActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/HttpHelper.java" />
+        <option value="$PROJECT_DIR$/res/values/bitmaps.xml" />
+        <option value="$PROJECT_DIR$/res/drawable-hdpi/background.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/background.xml" />
+        <option value="$PROJECT_DIR$/res/layout/listitem.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/backgroundR.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/backgroundr.xml" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java" />
       </list>
     </option>
   </component>
@@ -232,7 +293,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,6 +303,12 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.maxzhang.lolkankan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -270,6 +336,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="maxzhang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lolkankan" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -295,36 +365,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.maxzhang.lolkankan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLKanKan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ZI-master/libs/pinyin4j-2.5.0.jar!/" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Vitamio_new/VitamioBundle" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="com.maxzhang.lolkankan" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -345,10 +402,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\开源\Android\LOLKanKan\res\drawable-hdpi" />
+      <recent name="F:\开源\Android\LOLKanKan\src\com\maxzhang\lolkankan" />
       <recent name="F:\开源\Android\LOLKanKan\res\raw" />
       <recent name="C:\Users\zlhxd_000\Documents\GitHub\LOLKanKan\src\com\maxzhang\lolkankan" />
       <recent name="D:\Users\Maxzhang8\Documents\GitHub\LOLKanKan\res\layout" />
-      <recent name="D:\Users\Maxzhang8\Documents\GitHub\LOLKanKan" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\Maxzhang8\Documents\GitHub\LOLKanKan\src" />
@@ -387,19 +445,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -426,6 +471,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -566,42 +624,46 @@
       <created>1369723262104</created>
       <updated>1369723262104</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="更新">
+      <created>1369723596884</created>
+      <updated>1369723596884</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32681563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283046" sideWeight="0.6703911" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3980447" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24281609" sideWeight="0.67318434" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283046" sideWeight="0.67224544" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24568966" sideWeight="0.6703911" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32614943" sideWeight="0.6703911" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282123" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3980447" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686782" sideWeight="0.67224544" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -673,94 +735,122 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://F:/android-sdk x64/sdk/platforms/android-17/android.jar!/android/content/Intent.class">
+    <entry file="file://$PROJECT_DIR$/../ZI-master/src/com/yixia/zi/utils/StringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="247" column="11" selection-start="20981" selection-end="20981" vertical-scroll-proportion="10.671233" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../Vitamio_new/VitamioBundle/libs/vitamio.jar!/io/vov/vitamio/LibsChecker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="338" selection-end="338" vertical-scroll-proportion="0.4589372" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gen/com/maxzhang/lolkankan/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="170" selection-end="170" vertical-scroll-proportion="0.13828239" />
-      </provider>
-    </entry>
-    <entry file="jar://F:/android-sdk x64/sdk/platforms/android-17/android.jar!/android/os/Looper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="712" selection-end="712" vertical-scroll-proportion="0.38557214" />
-      </provider>
-    </entry>
-    <entry file="jar://F:/android-sdk x64/sdk/platforms/android-17/android.jar!/android/os/Handler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="564" selection-end="564" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="jar://F:/android-sdk x64/sdk/platforms/android-17/android.jar!/android/app/Instrumentation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="16" selection-start="5963" selection-end="5963" vertical-scroll-proportion="0.33161953" />
-      </provider>
-    </entry>
-    <entry file="jar://F:/android-sdk x64/sdk/platforms/android-17/android.jar!/android/app/Activity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="19" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.33161953" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../Vitamio_new/VitamioBundle/bin/vitamiobundle.jar!/io/vov/vitamio/widget/MediaController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="0.1389728" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Vitamio_new/Test/src/com/yixia/test/VideoViewDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="45" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.47016013" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="29" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="18" selection-start="129" selection-end="129" vertical-scroll-proportion="0.12610619" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lint.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.maxzhang.lolkankan.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="70" selection-start="825" selection-end="825" vertical-scroll-proportion="0.49709302">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/VideoPlayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="51" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
+        <state line="91" column="48" selection-start="3310" selection-end="3310" vertical-scroll-proportion="3.109589">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/VideoPlayActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="61" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/FindVideoPlayTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="41" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.43378997">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/com/maxzhang/lolkankan/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="1" selection-start="175" selection-end="175" vertical-scroll-proportion="0.25277162">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="24" selection-start="1193" selection-end="1205" vertical-scroll-proportion="0.50554323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/HttpHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="53" selection-start="774" selection-end="774" vertical-scroll-proportion="0.71175164">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/listitem.xml">
+      <provider editor-type-id="text-editor">
+        <state line="3" column="29" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/backgroundr.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="691" selection-end="691" vertical-scroll-proportion="-10.857142">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://F:/android-sdk x64/sdk/platforms/android-17/android.jar!/android/widget/AbsListView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/android-sdk x64/sdk/platforms/android-17/android.jar!/android/os/AsyncTask.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="62" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.36503857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.71302426">
+        <state line="23" column="22" selection-start="752" selection-end="752" vertical-scroll-proportion="0.2835821">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="0" selection-start="4159" selection-end="4159" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#saveFile#0;class#AsyncHtmlRequestTask#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="69" selection-start="3044" selection-end="3044" vertical-scroll-proportion="0.7184035">
           <folding />
         </state>
       </provider>
@@ -817,7 +907,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>com.maxzhang.lolkankan</last-edited>
+          <last-edited>ZI-master</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

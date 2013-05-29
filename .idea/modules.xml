@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../VitamioBundle-4/InitActivity.iml" filepath="$PROJECT_DIR$/../VitamioBundle-4/InitActivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ZI-master/ZI-master.iml" filepath="$PROJECT_DIR$/../ZI-master/ZI-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.maxzhang.lolkankan.iml" filepath="$PROJECT_DIR$/com.maxzhang.lolkankan.iml" />
     </modules>
   </component>

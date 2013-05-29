@@ -21,6 +21,7 @@ import com.maxzhang.BindingSourceAdapter.util.ViewBinderFactory;
 
 public class BindingSourceAdapter<T> extends ArrayAdapter<T> 
 {
+    public Object Tag;
 	private LayoutInflater _inflater;
 	private List<T> _source;
 	private Context _context;

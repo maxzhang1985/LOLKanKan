@@ -14,9 +14,11 @@ import java.net.URL;
  */
 public class HttpHelper {
 
-    public static String getHtmlCode(String path) throws Exception {
+    public static String getHtmlCode(String path , String userAgent) throws Exception {
         URL url = new URL(path);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        if(userAgent!=null || userAgent!="")
+            conn.setRequestProperty("User-Agent",userAgent);
         conn.setRequestMethod("GET");
         conn.setConnectTimeout(5 * 1000);
         InputStream inStream = conn.getInputStream();

@@ -33,7 +33,6 @@ public class AsyncHtmlRequestTask extends AsyncTask<String, Integer, String>
     {
         listActivity = context;
         isComplete = false;
-        index = 1;
     }
 
 
@@ -76,20 +75,24 @@ public class AsyncHtmlRequestTask extends AsyncTask<String, Integer, String>
         return pageList;
     }
 
+    public void setPageList(List<String> pagelist)
+    {
+        pageList = pagelist;
+    }
+
     public int getPageIndex()
     {
         return index;
 
     }
 
-    public void Rest()
+    public void setPageIndex(int i)
     {
-        index = 1;
-        pageList.clear();
-        videoList.clear();
+        index = i;
     }
 
-    private int index;
+
+    private int index = 1;
 
     @Override
     protected String doInBackground(String... params) {
@@ -97,9 +100,12 @@ public class AsyncHtmlRequestTask extends AsyncTask<String, Integer, String>
         if(params.length <= 0 )
         {
             int pageCount = pageList.size();
+            Log.v("page", String.valueOf(pageCount) + ", " + String.valueOf(index));
             if(pageCount > index){
                 httpUrl = pageList.get(index);
-                index++;
+                Log.v("page",String.valueOf(index));
+                index = index + 1;
+
             }
             else
             {
@@ -115,7 +121,7 @@ public class AsyncHtmlRequestTask extends AsyncTask<String, Integer, String>
 
         this.addPageList(httpUrl);
         try {
-            strResult = HttpHelper.getHtmlCode(httpUrl);
+            strResult = HttpHelper.getHtmlCode(httpUrl,null);
             Log.v("log",strResult);
 //            saveFile(strResult);
         } catch (Exception e) {
@@ -159,6 +165,7 @@ public class AsyncHtmlRequestTask extends AsyncTask<String, Integer, String>
             return;
 
         BindingSourceAdapter<VideoInfo> adapter = (BindingSourceAdapter<VideoInfo>)listActivity.getListAdapter();
+        adapter.Tag= this.index;
         adapter.addAll(this.videoList);
         adapter.notifyDataSetChanged();
         this.videoList.clear();

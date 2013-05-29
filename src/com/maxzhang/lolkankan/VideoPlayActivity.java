@@ -25,8 +25,8 @@ public class VideoPlayActivity extends Activity {
         setContentView(R.layout.videoplay);
 
         Log.v("log", "start");
-//        if (!io.vov.vitamio.LibsChecker.checkVitamioLibs(this, getClass().getName(), R.string.init, R.raw.libarm))
-//          return;
+        if (!io.vov.vitamio.LibsChecker.checkVitamioLibs(this))
+          return;
         Log.v("log", "checked");
 
         mVideoView = (VideoView) findViewById(R.id.surface_view);
@@ -40,7 +40,7 @@ public class VideoPlayActivity extends Activity {
         mVideoView.setOnPreparedListener(new OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
-                mVideoView.setSubShown(true);
+                mp.start();
             }
         });
         mVideoView.setMediaController(new MediaController(this));
