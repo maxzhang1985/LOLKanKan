@@ -57,7 +57,7 @@ public class FindVideoPlayTask extends AsyncTask<String, Integer, String>
        
        
         try {
-            strResult = HttpHelper.getHtmlCode(httpUrl,"Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3");
+            strResult = HttpHelper.getHtmlCode(httpUrl,"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A405 Safari/7534.48.3");
             Log.v("log",strResult);
             saveFile(strResult);
         } catch (Exception e) {

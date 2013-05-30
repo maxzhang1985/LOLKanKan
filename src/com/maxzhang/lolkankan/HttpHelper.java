@@ -20,6 +20,7 @@ public class HttpHelper {
         if(userAgent!=null || userAgent!="")
             conn.setRequestProperty("User-Agent",userAgent);
         conn.setRequestMethod("GET");
+        conn.setRequestProperty("Cache-Control", "no-cache");
         conn.setConnectTimeout(5 * 1000);
         InputStream inStream = conn.getInputStream();
         byte[] data = readFromInput(inStream);
