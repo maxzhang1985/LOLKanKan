@@ -9,7 +9,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:cacheColorHint="@android:color/transparent"
-            android:divider="#8e5c07"
+            android:divider="#7e84ac"
             android:dividerHeight="1px"
             android:background="@drawable/backgroundr"
             android:listSelector="@android:color/transparent"

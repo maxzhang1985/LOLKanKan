@@ -21,11 +21,9 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
          />
-        <TextView
-            android:id="@+id/TimeSpan"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </LinearLayout>

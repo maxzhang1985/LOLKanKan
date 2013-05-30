@@ -9,18 +9,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import android.app.ListActivity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.util.Log;
 
+import android.widget.Toast;
 import com.maxzhang.BindingSourceAdapter.BindingSourceAdapter;
 
 public class FindVideoPlayTask extends AsyncTask<String, Integer, String>
 {
-   
-    public FindVideoPlayTask()
+    private Context mContext;
+    public FindVideoPlayTask(Context context)
     {
-    
+        mContext = context;
 
     }
 
@@ -54,38 +57,60 @@ public class FindVideoPlayTask extends AsyncTask<String, Integer, String>
     protected String doInBackground(String... params) {
     	String strResult;
         String httpUrl = params[0];
-       
-       
+        String playerUrl = null;
         try {
             strResult = HttpHelper.getHtmlCode(httpUrl,"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A405 Safari/7534.48.3");
-            Log.v("log",strResult);
-            saveFile(strResult);
+            String match = "<embed.*src=\"(.*?)\"";
+            Pattern pattern = Pattern.compile(match);
+            Matcher matcher = pattern.matcher(strResult);
+            if(matcher.find())
+            {
+                playerUrl = matcher.group(1);
+            }
+            else
+            {
+                String newUrl = httpUrl.replace("lol.178.com/", "178.v.playradio.cn/");
+                strResult = HttpHelper.getHtmlCode(newUrl,null);
+                matcher = pattern.matcher(strResult);
+                if(matcher.find())
+                {
+                    playerUrl = matcher.group(1);
+
+                    Pattern pattern1 = Pattern.compile("sid/(.*)/");
+                    Matcher matcher1 = pattern1.matcher(playerUrl);
+                    if(matcher1.find())
+                    {
+                        playerUrl = matcher1.group(1);
+                        playerUrl = "http://v.youku.com/player/getRealM3U8/vid/" + playerUrl +"/type/video.m3u8";
+                    }
+                    else
+                    {
+                        playerUrl =null;
+                    }
+                }
+            }
         } catch (Exception e) {
             Log.e("error",e.getMessage());
         }
-        /*int postion = httpUrl.indexOf(".html");
-        String match = httpUrl.substring(0,postion) + "_\\d*" + httpUrl.substring(postion);
-        Log.v(match, "log");
-        Pattern pattern = Pattern.compile(match);
-        Matcher matcher = pattern.matcher(strResult);
 
-        while(matcher.find())
-        {
-            String s= matcher.group();
-            Log.v(s,"log");
-        }
 
- 		*/
-
-        return null;
+        return playerUrl;
 
     }
 
 
     @Override
-    protected void onPostExecute(String s) {
-     
-      
-        super.onPostExecute(s);    //To change body of overridden methods use File | Settings | File Templates.
+    protected void onPostExecute(String playerUrl) {
+        if(!playerUrl.equals(null) || !playerUrl.equals("")){
+            Toast.makeText(mContext, "正在缓冲中，请稍后......", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(mContext,VideoPlayActivity.class);
+            i.putExtra("player",playerUrl);
+            mContext.startActivity(i);
+        }
+        else
+        {
+            Toast.makeText(mContext, "系统不支持此格式，请联系管理员！", Toast.LENGTH_LONG).show();
+        }
+        super.onPostExecute(playerUrl);    //To change body of overridden methods use File | Settings | File Templates.
     }
 }

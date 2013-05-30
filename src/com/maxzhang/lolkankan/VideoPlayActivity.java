@@ -24,6 +24,8 @@ public class VideoPlayActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.videoplay);
 
+        String playUrl = getIntent().getStringExtra("player");
+
         Log.v("log", "start");
         if (!io.vov.vitamio.LibsChecker.checkVitamioLibs(this))
           return;
@@ -31,11 +33,10 @@ public class VideoPlayActivity extends Activity {
 
         mVideoView = (VideoView) findViewById(R.id.surface_view);
         //http://live.gslb.letv.com/gslb?stream_id=cctv1&tag=live&ext=m3u8&sign=live_ipad
-        Uri pathUri = Uri.parse("http://v.youku.com/player/getRealM3U8/vid/XNTQwNDYxNTMy/type/video.m3u8");
-        Log.v("log", pathUri.toString());
-        if (pathUri != null)
-            mVideoView.setVideoURI(pathUri);
-        Log.v("log", "palyed");
+        Uri pathUri = Uri.parse(playUrl);
+
+        mVideoView.setVideoURI(pathUri);
+
         mVideoView.setVideoQuality(MediaPlayer.VIDEOQUALITY_HIGH);
         mVideoView.setOnPreparedListener(new OnPreparedListener() {
             @Override

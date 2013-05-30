@@ -5,7 +5,9 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
@@ -42,7 +44,7 @@ public class MyActivity extends ListActivity {
         ListView listView = this.getListView();
         listView.setOnScrollListener(mScrollListener);
         ActionBar actionBar = getActionBar();
-
+        actionBar.setHomeButtonEnabled(true);
 
     }
 
@@ -55,6 +57,18 @@ public class MyActivity extends ListActivity {
 
         super.onDestroy();
     }
+
+    private boolean isLoading = false;
+    public boolean getIsLoading()
+    {
+        return isLoading;
+    }
+
+    public void setIsloading(boolean loading)
+    {
+        isLoading = loading;
+    }
+
 
     private int lastItem;//listview当前显示页面的最后一条数据
     private int firstItem;//listview当前显示页面的第一条数据
@@ -69,16 +83,16 @@ public class MyActivity extends ListActivity {
                 case AbsListView.OnScrollListener.SCROLL_STATE_IDLE:
                     bindingSourceAdapter.setFlagBusy(false);
                     int count = bindingSourceAdapter.getCount();
-                    if(lastItem >= count)
+                    if(lastItem >= count && task.getComplete())
                     {
                         int pageindex =  Integer.valueOf(bindingSourceAdapter.Tag.toString());
                         List<String> pageList = task.getPageList();
 
                         if(pageindex < pageList.size()){
-                            AsyncHtmlRequestTask newtask = new AsyncHtmlRequestTask(MyActivity.this);
-                            newtask.setPageList(pageList);
-                            newtask.setPageIndex(pageindex);
-                            newtask.execute();
+                            task = new AsyncHtmlRequestTask(MyActivity.this);
+                            task.setPageList(pageList);
+                            task.setPageIndex(pageindex);
+                            task.execute();
                             Toast.makeText(MyActivity.this, "正在加载数据......", Toast.LENGTH_LONG).show();
                         }
                         else
@@ -107,39 +121,46 @@ public class MyActivity extends ListActivity {
 
     @Override
     protected void onListItemClick(android.widget.ListView l, android.view.View v, int position, long id) {
-        //Log.i("msg",this.items[position]);
+
         VideoInfo info = this.bindingSourceAdapter.getItem(position);
 
         try {
-
-            //AsyncHtmlRequestTask.saveFile(html);
-            //Log.v("saveFile",html);
-
-            String newUrl = info.Url.replace("lol.178.com/", "178.v.playradio.cn/");
-
-            FindVideoPlayTask task = new FindVideoPlayTask();
-            task.execute(newUrl);
-
+            Toast.makeText(this, "正在读取网络文件，请稍后......", Toast.LENGTH_LONG).show();
+            FindVideoPlayTask task = new FindVideoPlayTask(this);
+            task.execute(info.Url);
         } catch (Exception e) {
-//			 TODO Auto-generated catch block
             e.printStackTrace();
         }
 
-        Intent i = new Intent(this,VideoPlayActivity.class);
-        startActivity(i);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         super.onCreateOptionsMenu(menu);
-        //添加菜单项
-        MenuItem add=menu.add(0,0,0,"？");
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mainmenu, menu);
 
-        //绑定到ActionBar
-        add.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         return true;
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        String m = "";
+        switch (item.getItemId())
+        {
+            case R.id.mainmenu1:
+                m="menu1";
+                break;
+            case R.id.mainmenu2:
+                m="menu2";
+                break;
+            case android.R.id.home:
+                m="home";
+                break;
+        }
+        Toast.makeText(this, m, Toast.LENGTH_LONG).show();
+        return super.onOptionsItemSelected(item);
+    }
 }

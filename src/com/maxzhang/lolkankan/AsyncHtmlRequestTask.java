@@ -91,11 +91,16 @@ public class AsyncHtmlRequestTask extends AsyncTask<String, Integer, String>
         index = i;
     }
 
+    public boolean getComplete()
+    {
+        return isComplete;
+    }
 
     private int index = 1;
 
     @Override
     protected String doInBackground(String... params) {
+
         String httpUrl ="";
         if(params.length <= 0 )
         {
