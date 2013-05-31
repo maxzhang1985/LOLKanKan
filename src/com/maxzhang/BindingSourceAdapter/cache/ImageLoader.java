@@ -20,6 +20,8 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.ImageView;
 
 public class ImageLoader {
@@ -168,7 +170,7 @@ public class ImageLoader {
 	class BitmapDisplayer implements Runnable {
 		Bitmap bitmap;
 		PhotoToLoad photoToLoad;
-
+        Animation animation = new AlphaAnimation(0.1f,1.0f);
 		public BitmapDisplayer(Bitmap b, PhotoToLoad p) {
 			bitmap = b;
 			photoToLoad = p;
@@ -177,8 +179,13 @@ public class ImageLoader {
 		public void run() {
 			if (imageViewReused(photoToLoad))
 				return;
-			if (bitmap != null)
-				photoToLoad.imageView.setImageBitmap(bitmap);
+			if (bitmap != null){
+                photoToLoad.imageView.setAnimation(animation);
+                photoToLoad.imageView.setImageBitmap(bitmap);
+                animation.setDuration(900);
+                animation.startNow();
+
+            }
 	
 		}
 	}
