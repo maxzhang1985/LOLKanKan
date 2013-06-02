@@ -4,17 +4,15 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AbsListView;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.view.*;
+import android.widget.*;
 import com.maxzhang.BindingSourceAdapter.BindingSourceAdapter;
+import net.simonvt.menudrawer.MenuDrawer;
+import net.simonvt.menudrawer.Position;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,13 +21,19 @@ public class MyActivity extends ListActivity {
 
     private BindingSourceAdapter<VideoInfo> bindingSourceAdapter = null;
     AsyncHtmlRequestTask task = new AsyncHtmlRequestTask(MyActivity.this);
+    private MenuDrawer mDrawer;
+
+
     /**
      * Called when the activity is first created.
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        //setContentView(R.layout.main);
+        mDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_CONTENT);
+        mDrawer.setMenuView(R.layout.activity_rightmenu);
+        mDrawer.setMenuSize(450);
         setupViews();
         //first request
         task.execute("http://lol.178.com/list/video.html");
@@ -46,8 +50,16 @@ public class MyActivity extends ListActivity {
         ActionBar actionBar = getActionBar();
         actionBar.setHomeButtonEnabled(true);
 
+
     }
 
+    @Override
+    public void setContentView(int layoutResID) {
+        // This override is only needed when using MENU_DRAG_CONTENT.
+        mDrawer.setContentView(layoutResID);
+        mDrawer.setBackground(getResources().getDrawable(R.drawable.backgroundr));
+        onContentChanged();
+    }
 
     @Override
     protected void onDestroy() {
@@ -157,7 +169,7 @@ public class MyActivity extends ListActivity {
                 m="menu2";
                 break;
             case android.R.id.home:
-                m="home";
+                mDrawer.toggleMenu(true);
                 break;
         }
         Toast.makeText(this, m, Toast.LENGTH_LONG).show();

@@ -6,7 +6,7 @@
 
     <uses-sdk
             android:minSdkVersion="7"
-            android:targetSdkVersion="15" />
+            android:targetSdkVersion="17" />
 
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -47,12 +47,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <service
-                android:name="io.vov.vitamio.VitamioService"
-                android:exported="false" >
-            <intent-filter>
-                <action android:name="io.vov.vitamio.IVitamioService" />
-            </intent-filter>
-        </service>
+
     </application>
 </manifest>

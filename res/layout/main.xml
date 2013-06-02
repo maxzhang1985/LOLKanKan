@@ -3,6 +3,7 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
+              android:alpha="0.7"
         >
     <ListView
             android:id="@android:id/list"
@@ -11,8 +12,10 @@
             android:cacheColorHint="@android:color/transparent"
             android:divider="#7e84ac"
             android:dividerHeight="1px"
-            android:background="@drawable/backgroundr"
+            android:background="@drawable/background"
             android:listSelector="@android:color/transparent"
+            android:smoothScrollbar="true"
+            android:alpha="0.7"
             />
 
 </LinearLayout>
