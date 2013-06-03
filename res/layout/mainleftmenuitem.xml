@@ -7,4 +7,4 @@
           android:textColor="#f1cb1f"
           android:paddingLeft="6dp"
           android:minHeight="?android:attr/listPreferredItemHeight"
-          android:textSize="14px" android:textStyle="bold" android:gravity="center_vertical|center_horizontal"/>
+          android:textSize="26px" android:textStyle="bold" android:gravity="center_vertical|center_horizontal"/>
