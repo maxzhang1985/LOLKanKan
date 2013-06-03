@@ -32,11 +32,12 @@ public class MyActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.main);
         mDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_CONTENT);
-        mDrawer.setMenuView(R.layout.activity_rightmenu);
+        mDrawer.setMenuView(R.layout.mainleftmenu);
         mDrawer.setMenuSize(450);
         setupViews();
         //first request
         task.execute("http://lol.178.com/list/video.html");
+        Log.v("exec","start");
     }
 
     private List<VideoInfo> videos = new ArrayList<VideoInfo>();
@@ -50,7 +51,29 @@ public class MyActivity extends ListActivity {
         ActionBar actionBar = getActionBar();
         actionBar.setHomeButtonEnabled(true);
 
+        //Menu List
+        ListView menuList = (ListView)this.findViewById(R.id.menulist);
+        menuList.setAdapter(new ArrayAdapter<String>(this, R.layout.mainleftmenuitem,getData()));
 
+
+        TextView emptyView = new TextView(this);
+        emptyView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
+        emptyView.setText("This appears when the list is empty");
+        emptyView.setVisibility(View.GONE);
+        ((ViewGroup)listView.getParent()).addView(emptyView);
+        listView.setEmptyView(emptyView);
+
+    }
+
+    private List<String> getData(){
+
+        List<String> data = new ArrayList<String>();
+        data.add("测试数据1");
+        data.add("测试数据2");
+        data.add("测试数据3");
+        data.add("测试数据4");
+
+        return data;
     }
 
     @Override
@@ -59,6 +82,18 @@ public class MyActivity extends ListActivity {
         mDrawer.setContentView(layoutResID);
         mDrawer.setBackground(getResources().getDrawable(R.drawable.backgroundr));
         onContentChanged();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        final int drawerState = mDrawer.getDrawerState();
+        if (drawerState == MenuDrawer.STATE_OPEN || drawerState == MenuDrawer.STATE_OPENING) {
+            mDrawer.closeMenu();
+            return;
+        }
+
+        super.onBackPressed();
     }
 
     @Override

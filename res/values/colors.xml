@@ -3,6 +3,6 @@
 
     <color name="md__transparent">#00000000</color>
 
-    <color name="md__defaultBackground">#FFFFFFFF</color>
+    <!--<color name="md__defaultBackground">#FFFFFFFF</color>-->
 
 </resources>

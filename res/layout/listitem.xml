@@ -12,18 +12,17 @@
             android:contentDescription="@string/app_name"  android:layout_marginLeft="0dp"/>
 
     <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="5dp">
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_marginLeft="5dp">
         <TextView
             android:id="@+id/Title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
+            android:textColor="#4767a5"
             android:layout_gravity="center"
-         />
+            android:textSize="13dp" android:textStyle="bold" android:textIsSelectable="false"/>
     </LinearLayout>
 
 </LinearLayout>

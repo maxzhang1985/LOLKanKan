@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/../VitamioBundle-4/InitActivity.iml" filepath="$PROJECT_DIR$/../VitamioBundle-4/InitActivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ZI-master/ZI-master.iml" filepath="$PROJECT_DIR$/../ZI-master/ZI-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.maxzhang.lolkankan.iml" filepath="$PROJECT_DIR$/com.maxzhang.lolkankan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../android-menudrawer-master/library/library.iml" filepath="$PROJECT_DIR$/../android-menudrawer-master/library/library.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/android-menudrawer-master/library/library.iml" filepath="$USER_HOME$/Downloads/android-menudrawer-master/library/library.iml" />
     </modules>
   </component>

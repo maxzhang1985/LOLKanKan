@@ -3,20 +3,16 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:alpha="0.7"
+
         >
     <ListView
             android:id="@android:id/list"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:cacheColorHint="@android:color/transparent"
-            android:divider="#7e84ac"
-            android:dividerHeight="1px"
-            android:background="@drawable/background"
-            android:listSelector="@android:color/transparent"
+            android:divider="@drawable/jbsharp"
+            android:dividerHeight="1dp"
             android:smoothScrollbar="true"
-            android:alpha="0.7"
+            android:listSelector="@drawable/md__list_selector_holo_dark"
             />
-
 </LinearLayout>
 
