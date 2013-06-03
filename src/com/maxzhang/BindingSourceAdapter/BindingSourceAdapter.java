@@ -61,8 +61,13 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 		return _source.get(arg0);
 		
 	}
-	
-	private void bindView(View view,int position)
+
+    @Override
+    public void clear() {
+        _source.clear();
+    }
+
+    private void bindView(View view,int position)
 	{
 		Resources res=_context.getResources();
 		Object item = _source.get(position);

@@ -4,8 +4,8 @@
           android:icon="@android:drawable/btn_star"
           android:showAsAction="ifRoom|withText">
         <menu>
-            <item android:id="@+id/mainmenu1"  android:title="Form 1"/>
-            <item android:id="@+id/mainmenu2"  android:title="Form 2"/>
+            <item android:id="@+id/mainmenu1"  android:title="更新"/>
+            <item android:id="@+id/mainmenu2"  android:title="关于"/>
         </menu>
     </item>
 </menu>

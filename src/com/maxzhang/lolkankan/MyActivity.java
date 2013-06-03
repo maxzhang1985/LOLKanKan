@@ -14,15 +14,14 @@ import com.maxzhang.BindingSourceAdapter.BindingSourceAdapter;
 import net.simonvt.menudrawer.MenuDrawer;
 import net.simonvt.menudrawer.Position;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class MyActivity extends ListActivity {
 
     private BindingSourceAdapter<VideoInfo> bindingSourceAdapter = null;
     AsyncHtmlRequestTask task = new AsyncHtmlRequestTask(MyActivity.this);
     private MenuDrawer mDrawer;
-
+    private LinkedHashMap<String,String> menuMap = new LinkedHashMap<String, String>();
 
     /**
      * Called when the activity is first created.
@@ -33,7 +32,7 @@ public class MyActivity extends ListActivity {
         //setContentView(R.layout.main);
         mDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_CONTENT);
         mDrawer.setMenuView(R.layout.mainleftmenu);
-        mDrawer.setMenuSize(450);
+        mDrawer.setMenuSize(250);
         setupViews();
         //first request
         task.execute("http://lol.178.com/list/video.html");
@@ -53,27 +52,44 @@ public class MyActivity extends ListActivity {
 
         //Menu List
         ListView menuList = (ListView)this.findViewById(R.id.menulist);
-        menuList.setAdapter(new ArrayAdapter<String>(this, R.layout.mainleftmenuitem,getData()));
+        menuList.setAdapter(new ArrayAdapter<String>(this, R.layout.mainleftmenuitem,getMenuData()));
+        menuList.setOnItemClickListener(onMenulistitemClick);
 
-
-        TextView emptyView = new TextView(this);
-        emptyView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
-        emptyView.setText("This appears when the list is empty");
-        emptyView.setVisibility(View.GONE);
-        ((ViewGroup)listView.getParent()).addView(emptyView);
-        listView.setEmptyView(emptyView);
 
     }
 
-    private List<String> getData(){
+    private List<String> getMenuData(){
+        menuMap.put("精彩视频专辑","http://lol.178.com/list/video.html");
+        menuMap.put("解说视频专辑","http://lol.178.com/list/guofuvideo/index.html");
+        menuMap.put("赛事专辑","http://lol.178.com/list/bisaishipin/index.html");
+        menuMap.put("国服高手解说","http://lol.178.com/list/116743038027.html");
+        menuMap.put("高端OB局解说","http://lol.178.com/list/ob.html");
+        menuMap.put("7M教学大全专辑","http://lol.178.com/list/146255006330.html");
+        menuMap.put("JY解说专辑","http://lol.178.com/list/jy/index.html");
+        menuMap.put("JD解说专辑","http://lol.178.com/list/120419608247.html");
+        menuMap.put("天天解说专辑","http://lol.178.com/list/124596016347.html");
+        menuMap.put("SMZ24解说专辑","http://lol.178.com/list/119657498491.html");
+        menuMap.put("戴尔解说专辑","http://lol.178.com/list/116477983166.html");
+        menuMap.put("JoKer解说专辑","http://lol.178.com/list/127966158778.html");
+        menuMap.put("小苍解说专辑","http://lol.178.com/list/xiaocang/index.html");
+        menuMap.put("小智解说专辑","http://lol.178.com/list/142589587871.html");
+        menuMap.put("小漠解说专辑","http://lol.178.com/list/xiaomo/index.html");
+        menuMap.put("天天解说专辑","http://lol.178.com/list/124596016347.html");
+        menuMap.put("WE专辑","http://lol.178.com/list/116743035365.html");
+        menuMap.put("CLG.EU专辑","http://lol.178.com/list/133669237409.html");
+        menuMap.put("M5专辑","http://lol.178.com/list/120167121601.html");
+        menuMap.put("IG专辑","http://lol.178.com/list/117082659809.html");
+        menuMap.put("打野专辑","http://lol.178.com/list/dayeshipin/index.html");
+        menuMap.put("娱乐专辑","http://lol.178.com/list/recommend.html");
 
-        List<String> data = new ArrayList<String>();
-        data.add("测试数据1");
-        data.add("测试数据2");
-        data.add("测试数据3");
-        data.add("测试数据4");
+        Object[] cs = menuMap.keySet().toArray();
 
-        return data;
+        ArrayList<String> menunamelist = new ArrayList<String>();
+        for(Object key : cs)
+        {
+            menunamelist.add(key.toString());
+        }
+        return menunamelist;
     }
 
     @Override
@@ -182,6 +198,24 @@ public class MyActivity extends ListActivity {
 
     }
 
+    private AdapterView.OnItemClickListener onMenulistitemClick =  new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View v, int pos, long id) {
+
+            Object[] vas = menuMap.values().toArray();
+            String url = vas[pos].toString();
+            if(task.getComplete())
+            {
+                bindingSourceAdapter.clear();
+                bindingSourceAdapter.notifyDataSetChanged();
+                task = new AsyncHtmlRequestTask(MyActivity.this);
+                task.execute(url);
+            }
+
+        }
+    };
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -207,7 +241,7 @@ public class MyActivity extends ListActivity {
                 mDrawer.toggleMenu(true);
                 break;
         }
-        Toast.makeText(this, m, Toast.LENGTH_LONG).show();
+
         return super.onOptionsItemSelected(item);
     }
 }

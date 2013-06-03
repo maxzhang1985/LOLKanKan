@@ -10,7 +10,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:divider="@drawable/jbsharp"
-                android:dividerHeight="1dp"
+                android:dividerHeight="1.2px"
                 android:smoothScrollbar="true"
                 android:listSelector="@drawable/md__list_selector_holo_dark"
 
