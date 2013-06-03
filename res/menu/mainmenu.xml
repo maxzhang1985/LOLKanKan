@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menu_new_form"
-          android:icon="@android:drawable/btn_star"
+          android:icon="@android:drawable/ic_menu_info_details"
           android:showAsAction="ifRoom|withText">
         <menu>
             <item android:id="@+id/mainmenu1"  android:title="更新"/>

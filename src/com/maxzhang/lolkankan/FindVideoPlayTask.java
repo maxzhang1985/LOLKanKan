@@ -75,20 +75,22 @@ public class FindVideoPlayTask extends AsyncTask<String, Integer, String>
                 if(matcher.find())
                 {
                     playerUrl = matcher.group(1);
-
-                    Pattern pattern1 = Pattern.compile("sid/(.*)/");
-                    Matcher matcher1 = pattern1.matcher(playerUrl);
-                    if(matcher1.find())
-                    {
-                        playerUrl = matcher1.group(1);
-                        playerUrl = "http://v.youku.com/player/getRealM3U8/vid/" + playerUrl +"/type/video.m3u8";
-                    }
-                    else
-                    {
-                        playerUrl =null;
-                    }
                 }
             }
+
+
+            Pattern pattern1 = Pattern.compile("sid/(.*)/");
+            Matcher matcher1 = pattern1.matcher(playerUrl);
+            if(matcher1.find())
+            {
+                playerUrl = matcher1.group(1);
+                playerUrl = "http://v.youku.com/player/getRealM3U8/vid/" + playerUrl +"/type/video.m3u8";
+            }
+            else
+            {
+                playerUrl =null;
+            }
+
         } catch (Exception e) {
             Log.e("error",e.getMessage());
         }
@@ -101,7 +103,8 @@ public class FindVideoPlayTask extends AsyncTask<String, Integer, String>
 
     @Override
     protected void onPostExecute(String playerUrl) {
-        if(!playerUrl.equals(null) || !playerUrl.equals("")){
+        if(playerUrl != null)
+        {
             Toast.makeText(mContext, "正在缓冲中，请稍后......", Toast.LENGTH_LONG).show();
             Intent i = new Intent(mContext,VideoPlayActivity.class);
             i.putExtra("player",playerUrl);
