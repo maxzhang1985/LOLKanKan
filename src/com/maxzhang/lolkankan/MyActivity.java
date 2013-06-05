@@ -32,7 +32,7 @@ public class MyActivity extends ListActivity {
         //setContentView(R.layout.main);
         mDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_CONTENT);
         mDrawer.setMenuView(R.layout.mainleftmenu);
-        mDrawer.setMenuSize(320);
+        mDrawer.setMenuSize(400);
         setupViews();
         //first request
         task.execute("http://lol.178.com/list/video.html");
@@ -210,6 +210,7 @@ public class MyActivity extends ListActivity {
                 bindingSourceAdapter.notifyDataSetChanged();
                 task = new AsyncHtmlRequestTask(MyActivity.this);
                 task.execute(url);
+                mDrawer.toggleMenu(true);
             }
 
         }
