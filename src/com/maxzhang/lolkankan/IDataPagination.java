@@ -29,9 +29,16 @@ public interface IDataPagination {
 
     /**
      * 执行分页组件下一页调用
+     */
+    public void Next();
+
+    /**
+     * 设置分页下一页回调函数。
      * @param pagination 分页回调接口函数，用于自定义下一页调用定制需求。
      */
-    public void Next(OnPaginationNextListener pagination);
+    public void setOnPaginationNextListener(OnPaginationNextListener pagination);
+
+
     public void Refresh(Object refeshData);
 
 }

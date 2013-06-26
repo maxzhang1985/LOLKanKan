@@ -10,6 +10,7 @@ package com.maxzhang.lolkankan;
 public interface OnPaginationNextListener {
     /**
      * 分页组件接口回调函数
+     * @param state 执行状态
      */
-    public void OnNext();
+    public void OnNext(Object state);
 }
