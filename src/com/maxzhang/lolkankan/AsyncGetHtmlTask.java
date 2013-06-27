@@ -27,6 +27,8 @@ public class AsyncGetHtmlTask extends AsyncTask<String, Integer, String> {
         String html = null;
         try {
             html = HttpHelper.getHtmlCode(httpUrl ,null);
+            if(_getHtmlCallback != null)
+                _getHtmlCallback.OnGetHtmlAsync(html);
         } catch (Exception e) {
             e.printStackTrace();
         }
