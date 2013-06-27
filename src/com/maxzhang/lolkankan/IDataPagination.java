@@ -38,7 +38,21 @@ public interface IDataPagination {
      */
     public void setOnPaginationNextListener(OnPaginationNextListener pagination);
 
-
+    /**
+     * 刷分页对象，从而重新获取分页地址
+     * @param refeshData 刷新数据，比如Html内容等。
+     */
     public void Refresh(Object refeshData);
+
+    /**
+     * 重新初始化分页对象
+     */
+    public void Rest();
+
+    /**
+     * 根据新的初始对象重新初始化分页对象
+     * @param startupObj 初始对象，一般为与第一页相关的对象
+     */
+    public void Rest(Object startupObj);
 
 }

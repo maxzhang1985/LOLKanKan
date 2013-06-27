@@ -1,7 +1,11 @@
 package com.maxzhang.lolkankan;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +15,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class VideoListPagination  implements IDataPagination , OnGetHtmlCallback {
+
     //当前页面索引
     private int currentIndex = 0;
     //当前页面集合
@@ -18,14 +23,10 @@ public class VideoListPagination  implements IDataPagination , OnGetHtmlCallback
 
     //取页面Html异步任务
     private AsyncGetHtmlTask asyncGetTask = null;
-
+    //
+    private OnPaginationNextListener onPaginationNextListener = null;
     private String startupPageUrl = null;
 
-
-    public void setStartupPageUrl(String url)
-    {
-        startupPageUrl = url;
-    }
 
     /**
      * 判断当前分页索引是否是分页组件中的第一页
@@ -62,16 +63,14 @@ public class VideoListPagination  implements IDataPagination , OnGetHtmlCallback
      */
     @Override
     public void Next() {
-        asyncGetTask = new AsyncGetHtmlTask();
-        asyncGetTask.setOnGetHtmlCallback(this);
-        if(this.isFirst())
+        if(currentPageList.size() > currentIndex)
         {
-
-
-            asyncGetTask.execute(currentPageList.get(0));
+            asyncGetTask = new AsyncGetHtmlTask();
+            asyncGetTask.setOnGetHtmlCallback(this);
+            asyncGetTask.execute(currentPageList.get(currentIndex));
+            currentIndex = currentIndex + 1;
         }
     }
-
     /**
      * 设置分页下一页回调函数。
      *
@@ -79,16 +78,74 @@ public class VideoListPagination  implements IDataPagination , OnGetHtmlCallback
      */
     @Override
     public void setOnPaginationNextListener(OnPaginationNextListener pagination) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        onPaginationNextListener = pagination;
     }
 
+    /**
+     * 重新初始化分页对象
+     */
+    @Override
+    public void Rest() {
+        if(startupPageUrl == null)
+            throw new UnsupportedOperationException("没有初始页面地址！");
+        this.currentPageList.clear();
+        this.currentPageList.add(startupPageUrl);
+        this.currentIndex = 0;
+    }
+
+    /**
+     * 根据新的初始对象重新初始化分页对象
+     *
+     * @param startupObj 初始对象，一般为与第一页相关的对象
+     */
+    @Override
+    public void Rest(Object startupObj) {
+        startupPageUrl = startupObj.toString();
+        this.Rest();
+    }
+
+
+    /**
+     * 刷分页对象，从而重新获取分页地址
+     * @param refeshData 刷新数据，比如Html内容等。
+     */
     @Override
     public void Refresh(Object refeshData) {
-        //To change body of implemented methods use File | Settings | File Templates.
+
+        String match = this.getPaginationMatchString();
+        Log.v(match, "log");
+        Pattern pattern = Pattern.compile(match);
+        Matcher matcher = pattern.matcher(refeshData.toString());
+
+        while(matcher.find())
+        {
+            String s= matcher.group();
+            if(!this.currentPageList.contains(s))
+                this.currentPageList.add(s);
+        }
+
     }
+
+    /**
+     * 取得分页地址的正则匹配字符串
+     */
+    protected String getPaginationMatchString()
+    {
+        String ms =  "_\\d*";
+        int postion = this.startupPageUrl.indexOf(".html");
+        String match = this.startupPageUrl.substring(0,postion) + ms + this.startupPageUrl.substring(postion);
+        return match;
+    }
+
+
+
+
 
     @Override
     public void OnGetHtml(String html) {
-
+        if(onPaginationNextListener != null){
+            this.Refresh(html);
+            onPaginationNextListener.OnNext(html);
+        }
     }
 }

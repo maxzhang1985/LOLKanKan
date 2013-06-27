@@ -10,11 +10,19 @@ import android.os.AsyncTask;
  * To change this template use File | Settings | File Templates.
  */
 public class AsyncGetHtmlTask extends AsyncTask<String, Integer, String> {
+
+    private boolean isBusy = false;
+
+    public boolean getIsBusy()
+    {
+        return isBusy;
+    }
+
     @Override
     protected String doInBackground(String... params) {
         if(params.length <= 0)
             return null;
-
+        isBusy =true;
         String httpUrl = params[0];
         String html = null;
         try {
@@ -37,6 +45,7 @@ public class AsyncGetHtmlTask extends AsyncTask<String, Integer, String> {
     @Override
     protected void onPostExecute(String s) {
 
+        isBusy =false;
         if(_getHtmlCallback != null && s != null)
             _getHtmlCallback.OnGetHtml(s);
 
