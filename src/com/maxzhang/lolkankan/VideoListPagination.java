@@ -144,13 +144,14 @@ public class VideoListPagination  implements IDataPagination , OnGetHtmlCallback
     @Override
     public void OnGetHtml(String html) {
         if(onPaginationNextListener != null){
-            this.Refresh(html);
+
             onPaginationNextListener.OnNext(html);
         }
     }
 
     @Override
     public void OnGetHtmlAsync(String html) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        //刷新分页地址列表
+        this.Refresh(html);
     }
 }
