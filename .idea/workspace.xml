@@ -24,35 +24,21 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="599ea65b-6574-4799-8720-ec403b650af2" name="Default" comment="更新">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/md__list_focused_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/md__list_longpressed_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/md__list_pressed_holo_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/md__list_selector_disabled_holo_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/jbsharp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/mainleftmenu.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/mainleftmenuitem.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/md__list_selector_background_transition_holo_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/md__list_selector_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/actionbarstyle.xml" afterPath="$PROJECT_DIR$/res/values/actionbarstyle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/listitem.xml" afterPath="$PROJECT_DIR$/res/layout/listitem.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+    <list default="true" id="599ea65b-6574-4799-8720-ec403b650af2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.maxzhang.lolkankan.eml" afterPath="$PROJECT_DIR$/com.maxzhang.lolkankan.eml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="com.maxzhang.lolkankan.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370239256710" ignored="false" />
-    <file path="/BindingSourceAdapter.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369817939447" ignored="false" />
+    <file path="/Dummy.txt" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1372666671150" ignored="false" />
+    <file path="/BindingSourceAdapter.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370246837532" ignored="false" />
     <file path="/DataField.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369553370574" ignored="false" />
     <file path="/VideoInfo.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369554918417" ignored="false" />
     <file path="/AsyncHtmlRequestTask.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369818874682" ignored="false" />
-    <file path="/fragment.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369295261215" ignored="false" />
+    <file path="/fragment.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370422792345" ignored="false" />
     <file path="/a.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369300889425" ignored="false" />
-    <file path="/MyActivity.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370237812985" ignored="false" />
+    <file path="/MyActivity.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370417760258" ignored="false" />
     <file path="/Album.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369319965853" ignored="false" />
     <file path="/HttpHelper.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369551568289" ignored="false" />
     <file path="/CommonUtil.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369551612782" ignored="false" />
@@ -60,8 +46,8 @@
     <file path="/IValueConverter.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369552905394" ignored="false" />
     <file path="/ViewBinderFactory.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369556783274" ignored="false" />
     <file path="/VideoPlayActivity.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369804058080" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369894233765" ignored="false" />
-    <file path="/strings.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369710531488" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370424434293" ignored="false" />
+    <file path="/strings.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370423308385" ignored="false" />
     <file path="/VideoViewDemo.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369714369845" ignored="false" />
     <file path="$PROJECT_DIR$/../ZI-master/gen/com/yixia/zi/BuildConfig.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369804676117" ignored="false" />
     <file path="/main.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370238793892" ignored="false" />
@@ -73,9 +59,16 @@
     <file path="/actionbarstyle.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369894337722" ignored="false" />
     <file path="/itembackgroundr.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369959963909" ignored="false" />
     <file path="/ImageLoader.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1369977392295" ignored="false" />
-    <file path="/mainleftmenu.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370238138716" ignored="false" />
-    <file path="/colors.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370236832428" ignored="false" />
-    <file path="/mainleftmenuitem.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370238827805" ignored="false" />
+    <file path="/mainleftmenu.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370245299692" ignored="false" />
+    <file path="/colors.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370245769089" ignored="false" />
+    <file path="/mainleftmenuitem.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370245345905" ignored="false" />
+    <file path="/mainmenu.xml" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370247582981" ignored="false" />
+    <file path="/StartActivity.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1370420045299" ignored="false" />
+    <file path="/IDataPagination.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1372320513696" ignored="false" />
+    <file path="/VideoListPagination.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1372382784176" ignored="false" />
+    <file path="/OnPaginationNextListener.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1372235984424" ignored="false" />
+    <file path="/AsyncGetHtmlTask.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1372312332818" ignored="false" />
+    <file path="/OnGetHtmlCallback.java" changelist="599ea65b-6574-4799-8720-ec403b650af2" time="1372236752493" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +76,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -90,7 +88,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -128,6 +125,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -141,27 +139,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java">
+      <file leaf-file-name="VideoListPagination.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/Pagination/VideoListPagination.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="84" selection-start="1902" selection-end="1902" vertical-scroll-proportion="0.0">
+            <state line="30" column="7" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#2402#2410#0" expanded="true" />
-                <element signature="class#3633:5661" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#509#517#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainleftmenuitem.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/mainleftmenuitem.xml">
+      <file leaf-file-name="AsyncGetHtmlTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/Pagination/AsyncGetHtmlTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="37" selection-start="224" selection-end="224" vertical-scroll-proportion="0.17882353">
-              <folding />
+            <state line="18" column="22" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.67655784">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -173,6 +179,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="maxzhang" />
+      </list>
+    </option>
     <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -184,22 +195,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/drawable/ab_background.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/util/FileManager.java" />
-        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/FindVideoPlayTask.java" />
-        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/HttpHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java" />
-        <option value="$PROJECT_DIR$/res/drawable/itembackgroundr.xml" />
-        <option value="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/cache/ImageLoader.java" />
-        <option value="$PROJECT_DIR$/res/layout/listitem.xml" />
-        <option value="$PROJECT_DIR$/res/values/actionbarstyle.xml" />
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/res/drawable/jbsharp.xml" />
-        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/mainleftmenu.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java" />
+        <option value="$PROJECT_DIR$/res/menu/mainmenu.xml" />
         <option value="$PROJECT_DIR$/res/layout/mainleftmenuitem.xml" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/StartActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/startpage.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/OnPaginationNextListener.java" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/OnGetHtmlCallback.java" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncGetHtmlTask.java" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/IDataPagination.java" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/VideoListPagination.java" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/Pagination/IDataPagination.java" />
+        <option value="$PROJECT_DIR$/src/com/maxzhang/lolkankan/Pagination/AsyncGetHtmlTask.java" />
       </list>
     </option>
   </component>
@@ -237,8 +248,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,29 +278,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.maxzhang.lolkankan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLKanKan" />
+              <option name="myItemId" value="maxzhang" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
+              <option name="myItemId" value="lolkankan" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -303,25 +300,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.maxzhang.lolkankan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLKanKan" />
+              <option name="myItemId" value="maxzhang" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="lolkankan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pagination" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -335,11 +326,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemId" value="maxzhang" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,11 +344,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,6 +367,7 @@
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -388,15 +376,15 @@
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="01889ed7cf969715" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\开源\Android\LOLKanKan\res\drawable" />
       <recent name="F:\开源\Android\LOLKanKan\res\drawable-hdpi" />
+      <recent name="F:\开源\Android\LOLKanKan\res\drawable" />
       <recent name="F:\开源\Android\LOLKanKan\src\com\maxzhang\lolkankan" />
       <recent name="F:\开源\Android\LOLKanKan\res\raw" />
       <recent name="C:\Users\zlhxd_000\Documents\GitHub\LOLKanKan\src\com\maxzhang\lolkankan" />
@@ -534,7 +522,7 @@
     <configuration default="false" name="com.maxzhang.lolkankan" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="com.maxzhang.lolkankan" />
       <option name="ACTIVITY_CLASS" value="com.maxzhang.lolkankan.MyActivity" />
-      <option name="MODE" value="specific_activity" />
+      <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
@@ -633,18 +621,55 @@
       <created>1369980090501</created>
       <updated>1369980090501</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="加入侧边栏菜单，优化界面。">
+      <created>1370239356240</created>
+      <updated>1370239356240</updated>
+    </task>
+    <task id="LOCAL-00015" summary="加入侧边栏菜单，优化界面。">
+      <created>1370250196883</created>
+      <updated>1370250196883</updated>
+    </task>
+    <task id="LOCAL-00016" summary="加入侧边栏菜单，优化界面。">
+      <created>1370251759796</created>
+      <updated>1370251759796</updated>
+    </task>
+    <task id="LOCAL-00017" summary="加入侧边栏菜单，优化界面。">
+      <created>1370417877200</created>
+      <updated>1370417877200</updated>
+    </task>
+    <task id="LOCAL-00018" summary="加入侧边栏菜单，优化界面。">
+      <created>1370424518466</created>
+      <updated>1370424518466</updated>
+    </task>
+    <task id="LOCAL-00019" summary="加入侧边栏菜单，优化界面。">
+      <created>1372238998599</created>
+      <updated>1372238998599</updated>
+    </task>
+    <task id="LOCAL-00020" summary="重构并抽象分页模型">
+      <created>1372325373319</created>
+      <updated>1372325373320</updated>
+    </task>
+    <task id="LOCAL-00021" summary="重构并抽象分页模型">
+      <created>1372638078081</created>
+      <updated>1372638078081</updated>
+    </task>
+    <task id="LOCAL-00022" summary="整理分页接口和实现类到Package包中。">
+      <created>1372666288952</created>
+      <updated>1372666288952</updated>
+    </task>
+    <task id="LOCAL-00023" summary="整理分页接口和实现类到Package包中。">
+      <created>1372666664828</created>
+      <updated>1372666664828</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283046" sideWeight="0.67318434" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32543105" sideWeight="0.67318434" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32496512" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32357043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -652,21 +677,24 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3366762" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32635984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2688713" sideWeight="0.67318434" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32681563" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2420977" sideWeight="0.66332376" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31896552" sideWeight="0.67318434" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32543105" sideWeight="0.67318434" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282123" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -714,7 +742,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="整理分页接口和实现类到Package包中。" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -731,6 +759,9 @@
     <MESSAGE value="bindingsourceAdapter" />
     <MESSAGE value="更新Async Next Page" />
     <MESSAGE value="更新" />
+    <MESSAGE value="加入侧边栏菜单，优化界面。" />
+    <MESSAGE value="重构并抽象分页模型" />
+    <MESSAGE value="整理分页接口和实现类到Package包中。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -740,129 +771,115 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../android-menudrawer-master/samples/src/net/simonvt/menudrawer/samples/ViewPagerSample.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/mainleftmenuitem.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="0" selection-start="4141" selection-end="4141" vertical-scroll-proportion="0.27802038">
-          <folding>
-            <element signature="class#TextViewFragment#0;class#ViewPagerSample#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="9" column="29" selection-start="466" selection-end="466" vertical-scroll-proportion="-6.107143" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../android-menudrawer-master/samples/src/net/simonvt/menudrawer/samples/WindowSample.java">
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/background.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/StartActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7103348">
+        <state line="19" column="49" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="27" selection-start="129" selection-end="138" vertical-scroll-proportion="0.12582782" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/startpage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="65" selection-start="458" selection-end="458" vertical-scroll-proportion="0.19529411" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="44" selection-start="1267" selection-end="1267" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../android-menudrawer-master/samples/src/net/simonvt/menudrawer/samples/ActionBarOverlaySample.java">
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/BindingSourceAdapter/BindingSourceAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="133" column="8" selection-start="3496" selection-end="3496" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../android-menudrawer-master/samples/src/net/simonvt/menudrawer/samples/ActionBarSherlockSample.java">
+    <entry file="jar://F:/android-sdk x64/sdk/platforms/android-17/android.jar!/android/widget/AdapterView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="121" column="28" selection-start="5435" selection-end="5435" vertical-scroll-proportion="0.79569894" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../android-menudrawer-master/samples/src/net/simonvt/menudrawer/samples/BaseListSample.java">
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/AsyncHtmlRequestTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="34" selection-start="2037" selection-end="2048" vertical-scroll-proportion="0.94032025">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/android-sdk x64/sdk/platforms/android-17/android.jar!/android/R.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="552" column="32" selection-start="39784" selection-end="39784" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="105" selection-end="170" vertical-scroll-proportion="0.20971303">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/md__list_selector_holo_dark.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/jbsharp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="332" selection-end="332" vertical-scroll-proportion="0.41942605">
+        <state line="145" column="9" selection-start="3129" selection-end="3546" vertical-scroll-proportion="0.02818991">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="84" selection-start="1902" selection-end="1902" vertical-scroll-proportion="0.0">
+        <state line="23" column="41" selection-start="766" selection-end="766" vertical-scroll-proportion="0.027656477">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/Pagination/OnGetHtmlCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="155" selection-end="155" vertical-scroll-proportion="0.2489083">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/Pagination/IDataPagination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="22" selection-start="152" selection-end="152" vertical-scroll-proportion="0.19359533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/Pagination/OnPaginationNextListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="167" selection-end="167" vertical-scroll-proportion="0.2489083">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/Pagination/VideoListPagination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="7" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#2402#2410#0" expanded="true" />
-            <element signature="class#3633:5661" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#509#517#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/listitem.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/maxzhang/lolkankan/Pagination/AsyncGetHtmlTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="0.5364706">
-          <folding />
+        <state line="18" column="22" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="38" selection-start="504" selection-end="504" vertical-scroll-proportion="0.5364706">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.67655784">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/mainleftmenu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="278" selection-end="278" vertical-scroll-proportion="0.24">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/md__list_focused_holo.9.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/md__list_pressed_holo_dark.9.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/mainleftmenuitem.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="37" selection-start="224" selection-end="224" vertical-scroll-proportion="0.17882353">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
   </component>
@@ -917,11 +934,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Android|com.maxzhang.lolkankan</last-edited>
+          <last-edited>com.maxzhang.lolkankan</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
