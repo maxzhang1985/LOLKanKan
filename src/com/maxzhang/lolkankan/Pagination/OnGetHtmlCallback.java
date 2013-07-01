@@ -1,4 +1,4 @@
-package com.maxzhang.lolkankan;
+package com.maxzhang.lolkankan.Pagination;
 
 /**
  * Created with IntelliJ IDEA.

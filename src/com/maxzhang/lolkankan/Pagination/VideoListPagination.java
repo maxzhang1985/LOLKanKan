@@ -1,10 +1,6 @@
 package com.maxzhang.lolkankan.Pagination;
 
 import android.util.Log;
-import com.maxzhang.lolkankan.AsyncGetHtmlTask;
-import com.maxzhang.lolkankan.OnGetHtmlCallback;
-import com.maxzhang.lolkankan.Pagination.IDataPagination;
-import com.maxzhang.lolkankan.Pagination.OnPaginationNextListener;
 
 import java.util.ArrayList;
 import java.util.List;

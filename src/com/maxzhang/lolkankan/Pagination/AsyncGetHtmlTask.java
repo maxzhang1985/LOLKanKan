@@ -1,6 +1,7 @@
-package com.maxzhang.lolkankan;
+package com.maxzhang.lolkankan.Pagination;
 
 import android.os.AsyncTask;
+import com.maxzhang.lolkankan.HttpHelper;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,7 +27,7 @@ public class AsyncGetHtmlTask extends AsyncTask<String, Integer, String> {
         String httpUrl = params[0];
         String html = null;
         try {
-            html = HttpHelper.getHtmlCode(httpUrl ,null);
+            html = HttpHelper.getHtmlCode(httpUrl, null);
             if(_getHtmlCallback != null)
                 _getHtmlCallback.OnGetHtmlAsync(html);
         } catch (Exception e) {
