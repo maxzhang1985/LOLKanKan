@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
  * User: Maxzhang8
  * Date: 13-6-26
  * Time: 下午4:28
- * To change this template use File | Settings | File Templates.
+ * 网络视频分页抽象类，实现分页接口和异步获取Html回调接口
  */
 public class VideoListPagination  implements IDataPagination , OnGetHtmlCallback {
 
@@ -65,7 +65,11 @@ public class VideoListPagination  implements IDataPagination , OnGetHtmlCallback
     public void Next() {
         if(currentPageList.size() > currentIndex)
         {
+            //如果当前任务正在执行中，则不进行分页处理。
+            if(!isFirst() && asyncGetTask.getIsBusy())
+                return;
             asyncGetTask = new AsyncGetHtmlTask();
+            //设置异步任务回调接口，取得Html内容
             asyncGetTask.setOnGetHtmlCallback(this);
             asyncGetTask.execute(currentPageList.get(currentIndex));
             currentIndex = currentIndex + 1;
