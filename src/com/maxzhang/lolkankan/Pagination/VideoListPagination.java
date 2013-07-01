@@ -1,6 +1,10 @@
-package com.maxzhang.lolkankan;
+package com.maxzhang.lolkankan.Pagination;
 
 import android.util.Log;
+import com.maxzhang.lolkankan.AsyncGetHtmlTask;
+import com.maxzhang.lolkankan.OnGetHtmlCallback;
+import com.maxzhang.lolkankan.Pagination.IDataPagination;
+import com.maxzhang.lolkankan.Pagination.OnPaginationNextListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +18,7 @@ import java.util.regex.Pattern;
  * Time: 下午4:28
  * 网络视频分页抽象类，实现分页接口和异步获取Html回调接口
  */
-public class VideoListPagination  implements IDataPagination , OnGetHtmlCallback {
+public class VideoListPagination  implements IDataPagination, OnGetHtmlCallback {
 
     //当前页面索引
     private int currentIndex = 0;
