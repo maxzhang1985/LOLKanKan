@@ -11,16 +11,25 @@ import android.util.Log;
 import android.view.*;
 import android.widget.*;
 import com.maxzhang.BindingSourceAdapter.BindingSourceAdapter;
+import com.maxzhang.lolkankan.Pagination.IDataPagination;
+import com.maxzhang.lolkankan.Pagination.OnPaginationNextListener;
+import com.maxzhang.lolkankan.Pagination.VideoListPagination;
 import net.simonvt.menudrawer.MenuDrawer;
 import net.simonvt.menudrawer.Position;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class MyActivity extends ListActivity {
+public class MyActivity extends Activity implements OnPaginationNextListener {
 
+    //视频列表绑定Adapter组件
     private BindingSourceAdapter<VideoInfo> bindingSourceAdapter = null;
-    AsyncHtmlRequestTask task = new AsyncHtmlRequestTask(MyActivity.this);
+    //数据分页组件
+    private IDataPagination dataPagination = null;
+    //滑动菜单控件
     private MenuDrawer mDrawer;
+    //用于存储视频栏目菜单列表
     private LinkedHashMap<String,String> menuMap = new LinkedHashMap<String, String>();
 
     /**
@@ -29,35 +38,42 @@ public class MyActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.main);
-        mDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_CONTENT);
-        mDrawer.setMenuView(R.layout.mainleftmenu);
-        mDrawer.setMenuSize(400);
         setupViews();
-        //first request
-        task.execute("http://lol.178.com/list/video.html");
-        Log.v("exec","start");
+
+        //初始化分页组件
+        dataPagination = new VideoListPagination();
+        dataPagination.setOnPaginationNextListener(this);
+        dataPagination.Rest("http://lol.178.com/list/video.html");
+        dataPagination.Next();
     }
 
-    private List<VideoInfo> videos = new ArrayList<VideoInfo>();
-
+    //初始化视图
     private void setupViews() {
-
-        bindingSourceAdapter =  new BindingSourceAdapter<VideoInfo>(this,R.layout.listitem,videos);
-        this.setListAdapter(bindingSourceAdapter);
-        ListView listView = this.getListView();
-        listView.setOnScrollListener(mScrollListener);
         ActionBar actionBar = getActionBar();
         actionBar.setHomeButtonEnabled(true);
+        //滑动菜单
+        mDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_CONTENT);
+        mDrawer.setContentView(R.layout.main);
+        mDrawer.setMenuView(R.layout.mainleftmenu);
+        mDrawer.setMenuSize(400);
+        mDrawer.setBackground(getResources().getDrawable(R.drawable.backgroundr));
 
-        //Menu List
+        //视频列表
+        List<VideoInfo> videos = new ArrayList<VideoInfo>();
+        bindingSourceAdapter =  new BindingSourceAdapter<VideoInfo>(this,R.layout.listitem,videos);
+
+        ListView view = (ListView)findViewById(R.id.listview);
+        view.setAdapter(bindingSourceAdapter);
+        view.setOnScrollListener(mVideoListViewScrollListener);
+        view.setOnItemClickListener(mVideoListViewItemClickListener);
+
+        //滑动菜单 Menu List
         ListView menuList = (ListView)this.findViewById(R.id.menulist);
         menuList.setAdapter(new ArrayAdapter<String>(this, R.layout.mainleftmenuitem,getMenuData()));
         menuList.setOnItemClickListener(onMenulistitemClick);
-
-
     }
 
+    //滑动菜单列表数据（视频专辑集合）
     private List<String> getMenuData(){
         menuMap.put("精彩视频专辑","http://lol.178.com/list/video.html");
         menuMap.put("解说视频专辑","http://lol.178.com/list/guofuvideo/index.html");
@@ -92,13 +108,83 @@ public class MyActivity extends ListActivity {
         return menunamelist;
     }
 
-    @Override
-    public void setContentView(int layoutResID) {
-        // This override is only needed when using MENU_DRAG_CONTENT.
-        mDrawer.setContentView(layoutResID);
-        mDrawer.setBackground(getResources().getDrawable(R.drawable.backgroundr));
-        onContentChanged();
-    }
+
+    //视频列表项单击事件
+    AdapterView.OnItemClickListener mVideoListViewItemClickListener =  new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+            VideoInfo info = bindingSourceAdapter.getItem(position);
+            try {
+                Toast.makeText(MyActivity.this, "正在读取网络文件，请稍后......", Toast.LENGTH_LONG).show();
+                FindVideoPlayTask task = new FindVideoPlayTask(MyActivity.this);
+                task.execute(info.Url);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    };
+
+    //滑动菜单列表项单击事件
+    private AdapterView.OnItemClickListener onMenulistitemClick =  new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View v, int pos, long id) {
+
+            Object[] vas = menuMap.values().toArray();
+            String url = vas[pos].toString();
+            bindingSourceAdapter.clear();
+            bindingSourceAdapter.notifyDataSetChanged();
+            dataPagination.Rest(url);
+            dataPagination.Next();
+            mDrawer.toggleMenu(true);
+        }
+    };
+
+
+
+    private int lastItem;//l视频列表当前显示页面的最后一条数据
+    //private int firstItem;//视频列表当前显示页面的第一条数据
+    //视频列表滑动事件
+    AbsListView.OnScrollListener mVideoListViewScrollListener = new AbsListView.OnScrollListener() {
+
+        @Override
+        public void onScrollStateChanged(AbsListView view, int scrollState) {
+            switch (scrollState) {
+                case AbsListView.OnScrollListener.SCROLL_STATE_FLING:
+                    bindingSourceAdapter.setFlagBusy(true);
+                    break;
+                case AbsListView.OnScrollListener.SCROLL_STATE_IDLE:
+                    bindingSourceAdapter.setFlagBusy(false);
+                    int count = bindingSourceAdapter.getCount();
+                    if(lastItem >= count )
+                    {
+                        dataPagination.Next();
+                    }
+                    break;
+                case AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL:
+                    bindingSourceAdapter.setFlagBusy(false);
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        @Override
+        public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+            lastItem = firstVisibleItem + visibleItemCount;//计算出lastitem的值
+        }
+    };
+
+
+
+//    ListActivty
+//    @Override
+//    public void setContentView(int layoutResID) {
+//        // This override is only needed when using MENU_DRAG_CONTENT.
+//        mDrawer.setContentView(layoutResID);
+//        mDrawer.setBackground(getResources().getDrawable(R.drawable.backgroundr));
+//        onContentChanged();
+//    }
 
 
     @Override
@@ -115,106 +201,23 @@ public class MyActivity extends ListActivity {
     @Override
     protected void onDestroy() {
 
-
         bindingSourceAdapter.clearCache();
 
         super.onDestroy();
     }
 
-    private boolean isLoading = false;
-    public boolean getIsLoading()
-    {
-        return isLoading;
-    }
-
-    public void setIsloading(boolean loading)
-    {
-        isLoading = loading;
-    }
-
-
-    private int lastItem;//listview当前显示页面的最后一条数据
-    private int firstItem;//listview当前显示页面的第一条数据
-    AbsListView.OnScrollListener mScrollListener = new AbsListView.OnScrollListener() {
-
-        @Override
-        public void onScrollStateChanged(AbsListView view, int scrollState) {
-            switch (scrollState) {
-                case AbsListView.OnScrollListener.SCROLL_STATE_FLING:
-                    bindingSourceAdapter.setFlagBusy(true);
-                    break;
-                case AbsListView.OnScrollListener.SCROLL_STATE_IDLE:
-                    bindingSourceAdapter.setFlagBusy(false);
-                    int count = bindingSourceAdapter.getCount();
-                    if(lastItem >= count && task.getComplete())
-                    {
-                        int pageindex =  Integer.valueOf(bindingSourceAdapter.Tag.toString());
-                        List<String> pageList = task.getPageList();
-
-                        if(pageindex < pageList.size()){
-                            task = new AsyncHtmlRequestTask(MyActivity.this);
-                            task.setPageList(pageList);
-                            task.setPageIndex(pageindex);
-                            task.execute();
-                            Toast.makeText(MyActivity.this, "正在加载数据......", Toast.LENGTH_LONG).show();
-                        }
-                        else
-                        {
-                            Toast.makeText(MyActivity.this, "已经是最后一页了!", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                    break;
-                case AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL:
-                    bindingSourceAdapter.setFlagBusy(false);
-                    break;
-                default:
-                    break;
-            }
-            //bindingSourceAdapter.notifyDataSetChanged();
-        }
-
-        @Override
-        public void onScroll(AbsListView view, int firstVisibleItem,
-                             int visibleItemCount, int totalItemCount) {
-            lastItem = firstVisibleItem + visibleItemCount;//计算出lastitem的值
-            firstItem = firstVisibleItem;//同样拿出lastitem的值
-        }
-    };
+//    private boolean isLoading = false;
+//    public boolean getIsLoading()
+//    {
+//        return isLoading;
+//    }
+//
+//    public void setIsloading(boolean loading)
+//    {
+//        isLoading = loading;
+//    }
 
 
-    @Override
-    protected void onListItemClick(android.widget.ListView l, android.view.View v, int position, long id) {
-
-        VideoInfo info = this.bindingSourceAdapter.getItem(position);
-
-        try {
-            Toast.makeText(this, "正在读取网络文件，请稍后......", Toast.LENGTH_LONG).show();
-            FindVideoPlayTask task = new FindVideoPlayTask(this);
-            task.execute(info.Url);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
-    }
-
-    private AdapterView.OnItemClickListener onMenulistitemClick =  new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View v, int pos, long id) {
-
-            Object[] vas = menuMap.values().toArray();
-            String url = vas[pos].toString();
-            if(task.getComplete())
-            {
-                bindingSourceAdapter.clear();
-                bindingSourceAdapter.notifyDataSetChanged();
-                task = new AsyncHtmlRequestTask(MyActivity.this);
-                task.execute(url);
-                mDrawer.toggleMenu(true);
-            }
-
-        }
-    };
 
 
     @Override
@@ -244,5 +247,45 @@ public class MyActivity extends ListActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * 分页组件接口下一页异步处理回调函数
+     *
+     * @param state 执行状态
+     * @return 返回处理后的结果数据
+     */
+    @Override
+    public Object OnNextAsync(Object state) {
+        String html = state.toString();
+        ArrayList<VideoInfo> videoList = new ArrayList<VideoInfo>();
+        String match1 = "<dt><a href=\"(.*?)\".*title=\"(.*?)\".*background-image:[\\s]*url\\(\\'(.*?)\\'\\);\"><span>(.*)</span>[\\s]*(<strong>(.*)</strong>)?";
+        Pattern pattern1 = Pattern.compile(match1);
+        Matcher matcher1 = pattern1.matcher(html);
+        while(matcher1.find())
+        {
+            VideoInfo info = new VideoInfo();
+            info.setUrl(matcher1.group(1));
+            info.setTitle(matcher1.group(2));
+            info.setImageUrl(matcher1.group(3));
+            info.setTimeSpan(matcher1.group(4));
+            videoList.add(info);
+        }
+        return videoList;
+    }
+
+    /**
+     * 分页组件接口用于界面显示的回调函数
+     *
+     * @param data 异步处理后的结果数据
+     */
+    @Override
+    public void OnDataBind(Object data) {
+        ArrayList<VideoInfo> videoList =(ArrayList<VideoInfo>)data;
+        bindingSourceAdapter.addAll(videoList);
+        bindingSourceAdapter.notifyDataSetChanged();
+        videoList.clear();
+        data = videoList = null;
+
     }
 }

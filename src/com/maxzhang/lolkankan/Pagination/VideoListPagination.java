@@ -23,10 +23,12 @@ public class VideoListPagination  implements IDataPagination, OnGetHtmlCallback 
 
     //取页面Html异步任务
     private AsyncGetHtmlTask asyncGetTask = null;
-    //
+    //分页回调接口
     private OnPaginationNextListener onPaginationNextListener = null;
+    //初始页面URL地址
     private String startupPageUrl = null;
-
+    //异步处理下一页结果数据
+    private Object callbackProcessData = null;
 
     /**
      * 判断当前分页索引是否是分页组件中的第一页
@@ -144,18 +146,25 @@ public class VideoListPagination  implements IDataPagination, OnGetHtmlCallback 
 
 
 
-
+    //OnGetHtmlCallback异步数据处理完成
     @Override
-    public void OnGetHtml(String html) {
+    public void OnComplete(String html) {
+//异步处理下一页
         if(onPaginationNextListener != null){
-
-            onPaginationNextListener.OnNext(html);
+            onPaginationNextListener.OnDataBind(callbackProcessData);
+            callbackProcessData = null;
         }
     }
 
+    //OnGetHtmlCallback异步获取并处理网络数据
     @Override
     public void OnGetHtmlAsync(String html) {
+        callbackProcessData = null;
         //刷新分页地址列表
         this.Refresh(html);
+        //异步处理下一页
+        if(onPaginationNextListener != null){
+            callbackProcessData = onPaginationNextListener.OnNextAsync(html);
+        }
     }
 }

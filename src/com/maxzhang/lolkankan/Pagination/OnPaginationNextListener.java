@@ -9,8 +9,15 @@ package com.maxzhang.lolkankan.Pagination;
  */
 public interface OnPaginationNextListener {
     /**
-     * 分页组件接口回调函数
+     * 分页组件接口下一页异步处理回调函数
      * @param state 执行状态
+     * @return 返回处理后的结果数据
      */
-    public void OnNext(Object state);
+    public Object OnNextAsync(Object state);
+    /**
+     * 分页组件接口用于界面显示的回调函数
+     * @param data 异步处理后的结果数据
+     */
+    public void OnDataBind(Object data);
+
 }

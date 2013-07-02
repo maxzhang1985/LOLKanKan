@@ -50,7 +50,7 @@ public class AsyncGetHtmlTask extends AsyncTask<String, Integer, String> {
 
         isBusy =false;
         if(_getHtmlCallback != null && s != null)
-            _getHtmlCallback.OnGetHtml(s);
+            _getHtmlCallback.OnComplete(s);
 
         super.onPostExecute(s);
     }

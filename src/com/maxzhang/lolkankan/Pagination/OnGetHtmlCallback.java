@@ -12,7 +12,7 @@ public interface OnGetHtmlCallback {
      * 通过获取网络页面Html内容后，回调函数（同步）
      * @param html 网络页面Html内容
      */
-    public void OnGetHtml(String html);
+    public void OnComplete(String html);
     /**
      * 通过获取网络页面Html内容后，回调函数（异步）
      * @param html 网络页面Html内容
