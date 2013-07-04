@@ -29,7 +29,15 @@
             android:scrollbars="vertical"
             android:scrollbarStyle="insideOverlay"
             android:stretchMode="columnWidth"
-        />
+            android:listSelector="#CDCD00"
+
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0.0dp"
+            android:layoutAnimation="@anim/navagation_gridview_animation"
+            android:cacheColorHint="@android:color/transparent"
+
+
+            />
 
 
 
