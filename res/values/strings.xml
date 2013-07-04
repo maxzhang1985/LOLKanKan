@@ -2,5 +2,6 @@
 <resources>
     <string name="app_name">com.maxzhang.lolkankan</string>
     <string name="app_title">英雄看看</string>
+    <string name="actity_title">英雄看看 成为高手必修课</string>
     <string name="init">init player</string>
 </resources>

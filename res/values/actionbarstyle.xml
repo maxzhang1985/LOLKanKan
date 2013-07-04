@@ -13,8 +13,23 @@
 
     <style name="Widget.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@drawable/ab_background</item>
+
+         <item name="android:displayOptions">useLogo|showHome|showTitle</item>
+            <item name="android:height">?android:attr/actionBarSize</item>
+            <item name="android:paddingLeft">0dip</item>
+            <item name="android:paddingTop">0dip</item>
+            <item name="android:paddingRight">0dip</item>
+            <item name="android:paddingBottom">0dip</item>
+            <item name="android:progressBarStyle">@android:style/Widget.ProgressBar.Horizontal</item>
+            <item name="android:indeterminateProgressStyle">@android:style/Widget.ProgressBar.Small</item>
     </style>
 
+    <!--<style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">-->
+        <!--<item name="android:layout_gravity">center_vertical</item>-->
+        <!--<item name="android:layout_width">fill_parent</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:color">#FFFFFF</item>-->
+    <!--</style>-->
     <style name="Widget.ActionBar.Transparent">
         <item name="android:background">@android:color/transparent</item>
     </style>

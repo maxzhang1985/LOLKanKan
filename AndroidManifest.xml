@@ -39,7 +39,8 @@
                 android:windowSoftInputMode="stateAlwaysHidden" />
         <!--android:theme="@android:style/Theme.Holo.Light"-->
         <activity android:name="com.maxzhang.lolkankan.MyActivity"
-
+                   android:icon="@drawable/logo_48"
+                   android:label="@string/actity_title"
                 >
 
             <!--<intent-filter>-->
@@ -58,5 +59,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
     </application>
 </manifest>

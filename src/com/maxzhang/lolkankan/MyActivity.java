@@ -56,13 +56,25 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
         mDrawer.setContentView(R.layout.main);
         mDrawer.setMenuView(R.layout.mainleftmenu);
         mDrawer.setMenuSize(400);
-        mDrawer.setBackground(getResources().getDrawable(R.drawable.backgroundr));
 
         //视频列表
         List<VideoInfo> videos = new ArrayList<VideoInfo>();
-        bindingSourceAdapter =  new BindingSourceAdapter<VideoInfo>(this,R.layout.listitem,videos);
+        ListView listview = (ListView)findViewById(R.id.listview);
+        GridView gridview = (GridView)findViewById(R.id.gridview);
+        AbsListView view = null;
+        int layoutListItemID;
+        if(gridview.getVisibility() == View.VISIBLE)
+        {
+            view = gridview;
+            layoutListItemID = R.layout.gridviewitem;
+        }
+        else
+        {
+            view = listview;
+            layoutListItemID = R.layout.listitem;
+        }
+        bindingSourceAdapter =  new BindingSourceAdapter<VideoInfo>(this,layoutListItemID,videos);
 
-        ListView view = (ListView)findViewById(R.id.listview);
         view.setAdapter(bindingSourceAdapter);
         view.setOnScrollListener(mVideoListViewScrollListener);
         view.setOnItemClickListener(mVideoListViewItemClickListener);

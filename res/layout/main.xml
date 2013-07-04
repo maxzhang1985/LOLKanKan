@@ -13,6 +13,25 @@
             android:dividerHeight="1dp"
             android:smoothScrollbar="true"
             android:listSelector="@drawable/md__list_selector_holo_dark"
-            android:headerDividersEnabled="true"/>
+            android:headerDividersEnabled="true"
+            android:visibility="gone"
+
+            />
+
+    <GridView
+            android:id="@+id/gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:horizontalSpacing="4dp"
+            android:verticalSpacing="4dp"
+            android:numColumns="auto_fit"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideOverlay"
+            android:stretchMode="columnWidth"
+        />
+
+
+
 </LinearLayout>
 
