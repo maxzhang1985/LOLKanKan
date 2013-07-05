@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
@@ -29,6 +31,8 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
     private final WeakHashMap<View, Map<String,View>> mParentViews = new WeakHashMap<View, Map<String,View>>();
     private boolean mBusy = false;
     ViewBinderFactory viewBinder ;
+
+    private int animationResID = -1;
 
     public void setFlagBusy(boolean busy) {
         this.mBusy = busy;
@@ -49,7 +53,12 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 		_inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         viewBinder = new ViewBinderFactory(context);
 	}
-	
+
+
+    public void setAnimationResID(int resID)
+    {
+        animationResID = resID;
+    }
 	
 	@Override
 	public int getCount() {
@@ -122,19 +131,25 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
-		
+	    boolean hasCreateNewView = false;
 		if(convertView == null)
 		{
 			Log.i("getview", "null");
 			convertView = _inflater.inflate(_resourceID,null);
 			Map<String, View> childViews = new HashMap<String, View>();
 			mParentViews.put(convertView, childViews);
+            hasCreateNewView = true;
 		}
 		
 		
 		
 		bindView(convertView,position);
-		
+
+        if(animationResID > -1)
+        {
+            Animation animation = AnimationUtils.loadAnimation(_context, animationResID);
+            convertView.startAnimation(animation);
+        }
 		return convertView;
 	}
 

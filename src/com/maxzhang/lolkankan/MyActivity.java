@@ -3,6 +3,7 @@ package com.maxzhang.lolkankan;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ListActivity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -31,6 +32,9 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
     private MenuDrawer mDrawer;
     //用于存储视频栏目菜单列表
     private LinkedHashMap<String,String> menuMap = new LinkedHashMap<String, String>();
+    //专辑加载动画
+    private ProgressDialog loadingDialog;
+    private RelativeLayout loadingPanle;
 
     /**
      * Called when the activity is first created.
@@ -45,17 +49,25 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
         dataPagination.setOnPaginationNextListener(this);
         dataPagination.Rest("http://lol.178.com/list/video.html");
         dataPagination.Next();
+        loadingDialog.show();
     }
 
     //初始化视图
     private void setupViews() {
         ActionBar actionBar = getActionBar();
         actionBar.setHomeButtonEnabled(true);
+
         //滑动菜单
         mDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_CONTENT);
         mDrawer.setContentView(R.layout.main);
         mDrawer.setMenuView(R.layout.mainleftmenu);
         mDrawer.setMenuSize(400);
+
+        loadingDialog = new ProgressDialog(this);
+        loadingDialog.setTitle("请稍等...");
+        loadingDialog.setMessage("正在加载专辑...");
+        loadingDialog.setIndeterminate(true);
+        loadingPanle = (RelativeLayout)findViewById(R.id.loadingpanle);
 
         //视频列表
         List<VideoInfo> videos = new ArrayList<VideoInfo>();
@@ -74,7 +86,7 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
             layoutListItemID = R.layout.listitem;
         }
         bindingSourceAdapter =  new BindingSourceAdapter<VideoInfo>(this,layoutListItemID,videos);
-
+        bindingSourceAdapter.setAnimationResID(R.anim.listview_item_add_anim);
         view.setAdapter(bindingSourceAdapter);
         view.setOnScrollListener(mVideoListViewScrollListener);
         view.setOnItemClickListener(mVideoListViewItemClickListener);
@@ -136,7 +148,7 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
         }
     };
 
-    //滑动菜单列表项单击事件
+    //专辑，滑动菜单列表项单击事件
     private AdapterView.OnItemClickListener onMenulistitemClick =  new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View v, int pos, long id) {
@@ -147,6 +159,11 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
             bindingSourceAdapter.notifyDataSetChanged();
             dataPagination.Rest(url);
             dataPagination.Next();
+            //加载专辑动画
+            Object[] keys = menuMap.keySet().toArray();
+            String message = "正在加载" +  keys[pos].toString();
+            loadingDialog.setMessage(message);
+            loadingDialog.show();
             mDrawer.toggleMenu(true);
         }
     };
@@ -170,6 +187,7 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
                     if(lastItem >= count )
                     {
                         dataPagination.Next();
+                        loadingPanle.setVisibility(View.VISIBLE);   //显示下一页加载动画
                     }
                     break;
                 case AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL:
@@ -262,7 +280,7 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
     }
 
     /**OnPaginationNextListener
-     * 分页组件接口下一页异步处理回调函数
+     * 分页组件接口下一页异步处理回调函数，不能在这里面编写关于UI层的代码
      * @param state 执行状态
      * @return 返回处理后的结果数据
      */
@@ -291,6 +309,11 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
      */
     @Override
     public void OnDataBind(Object data) {
+        //取消因变更专辑或当前专辑下一页，显示的数据加载动画。
+        if(loadingDialog.isShowing())
+            loadingDialog.hide();
+        loadingPanle.setVisibility(View.GONE);
+        //加载数据
         ArrayList<VideoInfo> videoList =(ArrayList<VideoInfo>)data;
         bindingSourceAdapter.addAll(videoList);
         bindingSourceAdapter.notifyDataSetChanged();

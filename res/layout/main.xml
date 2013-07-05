@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-
-        >
+>
     <ListView
             android:id="@+id/listview"
             android:layout_width="fill_parent"
@@ -33,13 +31,40 @@
 
             android:drawSelectorOnTop="false"
             android:fadingEdgeLength="0.0dp"
-            android:layoutAnimation="@anim/navagation_gridview_animation"
-            android:cacheColorHint="@android:color/transparent"
 
+            android:cacheColorHint="@android:color/transparent"
+            android:background="#000000"
 
             />
 
+    <!--android:layoutAnimation="@anim/navagation_gridview_animation"-->
+<RelativeLayout
+        android:id="@+id/loadingpanle"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.8"
+        android:visibility="gone"
+        android:background="#4c4f56">
+<LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
 
-
+    <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在加载数据......"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"/>
 </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>
 
