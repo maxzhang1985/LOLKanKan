@@ -230,9 +230,8 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
 
     @Override
     protected void onDestroy() {
-
         bindingSourceAdapter.clearCache();
-
+        bindingSourceAdapter.clear();
         super.onDestroy();
     }
 

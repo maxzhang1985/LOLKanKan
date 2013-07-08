@@ -170,7 +170,7 @@ public class ImageLoader {
 	class BitmapDisplayer implements Runnable {
 		Bitmap bitmap;
 		PhotoToLoad photoToLoad;
-        Animation animation = new AlphaAnimation(0.1f,1.0f);
+        Animation animation = new AlphaAnimation(0.5f,1.0f);
 		public BitmapDisplayer(Bitmap b, PhotoToLoad p) {
 			bitmap = b;
 			photoToLoad = p;
@@ -182,7 +182,7 @@ public class ImageLoader {
 			if (bitmap != null){
                 photoToLoad.imageView.setAnimation(animation);
                 photoToLoad.imageView.setImageBitmap(bitmap);
-                animation.setDuration(900);
+                animation.setDuration(1500);
                 animation.startNow();
 
             }

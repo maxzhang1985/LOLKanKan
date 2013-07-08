@@ -2,10 +2,8 @@ package com.maxzhang.BindingSourceAdapter;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.text.FieldPosition;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.WeakHashMap;
+import java.util.*;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.Log;
@@ -30,8 +28,8 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 	private int _resourceID;
     private final WeakHashMap<View, Map<String,View>> mParentViews = new WeakHashMap<View, Map<String,View>>();
     private boolean mBusy = false;
-    ViewBinderFactory viewBinder ;
-
+    private ViewBinderFactory viewBinder ;
+    private ArrayList<Integer> visitedIndexs = new ArrayList<Integer>();
     private int animationResID = -1;
 
     public void setFlagBusy(boolean busy) {
@@ -74,6 +72,9 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
     @Override
     public void clear() {
         _source.clear();
+
+        visitedIndexs.clear();
+
     }
 
     private void bindView(View view,int position)
@@ -92,12 +93,12 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 
 			Object result = null;
 			String resultString = null;
-			DataField  bindAnnotation = (DataField)field.getAnnotation(DataField.class);
+			DataField  bindAnnotation = field.getAnnotation(DataField.class);
 			if(bindAnnotation!=null)
 			{
 				try {
 					result = field.get(item);
-				} catch (Exception e) {
+				} catch (Exception ignored) {
 				}
 				resultString =  result == null ? "" : result.toString();
 				
@@ -130,26 +131,26 @@ public class BindingSourceAdapter<T> extends ArrayAdapter<T>
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
-	    boolean hasCreateNewView = false;
+
 		if(convertView == null)
 		{
 			Log.i("getview", "null");
 			convertView = _inflater.inflate(_resourceID,null);
 			Map<String, View> childViews = new HashMap<String, View>();
 			mParentViews.put(convertView, childViews);
-            hasCreateNewView = true;
+
 		}
-		
-		
-		
+
 		bindView(convertView,position);
 
-        if(animationResID > -1)
+        if(animationResID > -1 && !visitedIndexs.contains(position))
         {
             Animation animation = AnimationUtils.loadAnimation(_context, animationResID);
             convertView.startAnimation(animation);
         }
+
+        visitedIndexs.add(position);
+
 		return convertView;
 	}
 
