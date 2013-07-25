@@ -21,21 +21,19 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center"
-            android:horizontalSpacing="4dp"
-            android:verticalSpacing="4dp"
+            android:horizontalSpacing="8dp"
+            android:verticalSpacing="8dp"
             android:numColumns="auto_fit"
             android:scrollbars="vertical"
             android:scrollbarStyle="insideOverlay"
             android:stretchMode="columnWidth"
-            android:listSelector="#CDCD00"
-
+            android:fastScrollEnabled="true"
             android:drawSelectorOnTop="false"
             android:fadingEdgeLength="0.0dp"
 
             android:cacheColorHint="@android:color/transparent"
-            android:background="#000000"
 
-            />
+            android:background="#c1c1c1" android:smoothScrollbar="true"/>
 
     <!--android:layoutAnimation="@anim/navagation_gridview_animation"-->
 <RelativeLayout

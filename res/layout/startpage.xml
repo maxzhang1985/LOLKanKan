@@ -3,22 +3,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent" android:background="#144b99">
-
-
+              android:layout_height="match_parent" android:background="#144b99" android:gravity="center_vertical|center_horizontal">
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="320dp"
-            android:layout_height="400dp" android:layout_gravity="center" android:layout_marginTop="75dp">
+            android:layout_width="550px"
+            android:layout_height="650px">
         <ImageView
-                android:layout_width="500px"
-                android:layout_height="197px"
-                android:id="@+id/imageView" android:background="@drawable/lologo" android:layout_gravity="center"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="游戏视频收看聚集地"
-                android:id="@+id/textView" android:shadowColor="#0a0920"
-                android:textColor="#f7f2ff" android:textSize="18dp" android:layout_gravity="center_horizontal"/>
+                android:layout_width="550px"
+                android:layout_height="413px"
+                android:id="@+id/imageView"
+                android:background="@drawable/pagelogo" android:contentDescription=""/>
+
+        <TextView android:text="@string/actity_title"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center_horizontal" android:textColor="#ffffff" android:textSize="18dp"
+                  android:textStyle="bold"></TextView>
+
     </LinearLayout>
 </LinearLayout>

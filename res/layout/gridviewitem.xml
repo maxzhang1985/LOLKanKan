@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<RelativeLayout
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -8,28 +12,54 @@
             android:id="@+id/ImageUrl"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:minHeight="105dp"
-            android:contentDescription=""/>
-
-    <TextView
-            android:id="@+id/Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#88000000"
-            android:textSize="12dp"
-            android:textColor="#FFFFFF"
-            android:layout_alignParentBottom="true"
-            android:gravity="center_horizontal"
-            android:maxWidth="200dp"
-            android:minHeight="24dp"
-            android:alpha="0.85"
+            android:scaleType="fitXY"
+            android:minHeight="135dp"
+            android:maxHeight="150dp"
+            android:contentDescription="1" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@+id/textView"
+              android:layout_width="match_parent"
+              android:layout_height="25dp"
+              android:textSize="13dp"
+              android:textColor="#ffffff"
+              android:gravity="center_horizontal|left|right|fill_vertical"
+              android:alpha="0.75"
+              android:text="播放时间：30：45"
+              android:layout_alignParentBottom="true"
+              android:background="@android:color/black"
+              android:textStyle="bold"
             />
 
-
-
-
-
-
-
 </RelativeLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="42dp" android:background="#ffffff">
+        <TextView
+                android:id="@+id/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@android:color/black"
+                android:gravity="center_horizontal|left"
+                android:maxWidth="200dp"
+                android:minHeight="24dp"
+                android:textStyle="bold"/>
+        <TextView
+                android:id="@+id/t2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@android:color/darker_gray"
+                android:gravity="center_horizontal|left|fill_vertical"
+                android:alpha="0.85"
+                android:text="时间:2013/7/25"
+                />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+
+
