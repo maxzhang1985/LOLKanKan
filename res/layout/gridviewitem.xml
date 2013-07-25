@@ -16,17 +16,17 @@
             android:minHeight="135dp"
             android:maxHeight="150dp"
             android:contentDescription="1" android:layout_alignParentLeft="true"/>
-    <TextView android:id="@+id/textView"
+    <TextView android:id="@+id/TimeSpan"
               android:layout_width="match_parent"
               android:layout_height="25dp"
               android:textSize="13dp"
               android:textColor="#ffffff"
               android:gravity="center_horizontal|left|right|fill_vertical"
               android:alpha="0.75"
-              android:text="播放时间：30：45"
               android:layout_alignParentBottom="true"
               android:background="@android:color/black"
               android:textStyle="bold"
+
             />
 
 </RelativeLayout>
@@ -43,17 +43,16 @@
                 android:gravity="center_horizontal|left"
                 android:maxWidth="200dp"
                 android:minHeight="24dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" android:layout_marginLeft="5dp"/>
         <TextView
-                android:id="@+id/t2"
+                android:id="@+id/CurrentDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
                 android:textColor="@android:color/darker_gray"
                 android:gravity="center_horizontal|left|fill_vertical"
                 android:alpha="0.85"
-                android:text="时间:2013/7/25"
-                />
+                android:layout_marginLeft="5dp"/>
     </LinearLayout>
 
 

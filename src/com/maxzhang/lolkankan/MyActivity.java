@@ -18,6 +18,7 @@ import com.maxzhang.lolkankan.Pagination.VideoListPagination;
 import net.simonvt.menudrawer.MenuDrawer;
 import net.simonvt.menudrawer.Position;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -287,7 +288,7 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
     public Object OnNextAsync(Object state) {
         String html = state.toString();
         ArrayList<VideoInfo> videoList = new ArrayList<VideoInfo>();
-        String match1 = "<dt><a href=\"(.*?)\".*title=\"(.*?)\".*background-image:[\\s]*url\\(\\'(.*?)\\'\\);\"><span>(.*)</span>[\\s]*(<strong>(.*)</strong>)?";
+        String match1 = "<dt><a href=\"(.*?)\".*title=\"(.*?)\".*background-image:[\\s]*url\\(\\'(.*?)\\'\\);\">.*[\\s]*<strong>(.*)</strong>?";
         Pattern pattern1 = Pattern.compile(match1);
         Matcher matcher1 = pattern1.matcher(html);
         while(matcher1.find())
@@ -297,6 +298,10 @@ public class MyActivity extends Activity implements OnPaginationNextListener {
             info.setTitle(matcher1.group(2));
             info.setImageUrl(matcher1.group(3));
             info.setTimeSpan(matcher1.group(4));
+
+            Date d = new Date();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/ddE");
+            info.setCurrentDate(sdf.format(d));
             videoList.add(info);
         }
         return videoList;

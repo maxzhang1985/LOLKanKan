@@ -23,6 +23,8 @@ public class VideoInfo {
     @DataField
     public String TimeSpan;
 
+    @DataField
+    public String CurrentDate;
 
     public String getUrl() {
         return Url;
@@ -55,4 +57,16 @@ public class VideoInfo {
     public void setTimeSpan(String timeSpan) {
         TimeSpan = timeSpan;
     }
+
+    public void setCurrentDate(String date)
+    {
+        this.CurrentDate = date;
+    }
+
+    public String getCurrentDate()
+    {
+        return this.CurrentDate;
+    }
+
+
 }
