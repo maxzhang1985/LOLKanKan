@@ -1,5 +1,7 @@
 package com.maxzhang.lolkankan;
 
+import android.view.View;
+import android.widget.Button;
 import io.vov.vitamio.MediaPlayer;
 import io.vov.vitamio.MediaPlayer.OnPreparedListener;
 import io.vov.vitamio.widget.MediaController;
@@ -19,6 +21,7 @@ import android.util.Log;
 public class VideoPlayActivity extends Activity {
 
     private VideoView mVideoView;
+    Button mProressvalue;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,8 @@ public class VideoPlayActivity extends Activity {
         Log.v("log", "checked");
 
         mVideoView = (VideoView) findViewById(R.id.surface_view);
+        mProressvalue =  (Button)findViewById(R.id.proressvalue);
+
         //http://live.gslb.letv.com/gslb?stream_id=cctv1&tag=live&ext=m3u8&sign=live_ipad
         Uri pathUri = Uri.parse(playUrl);
 
@@ -44,6 +49,24 @@ public class VideoPlayActivity extends Activity {
                 mp.start();
             }
         });
+
+        mVideoView.setOnBufferingUpdateListener(new MediaPlayer.OnBufferingUpdateListener() {
+            @Override
+            public void onBufferingUpdate(MediaPlayer mp, int percent) {
+                if (percent < 99) {
+                    if(mProressvalue.getVisibility() == View.GONE)
+                        mProressvalue.setVisibility(View.VISIBLE);
+
+                    mProressvalue.setText(String.valueOf(percent));
+
+                } else {
+                    mProressvalue.setVisibility(View.GONE);
+                    mp.start();
+                }
+            }
+        });
+
+
         mVideoView.setMediaController(new MediaController(this));
         mVideoView.requestFocus();
     }
