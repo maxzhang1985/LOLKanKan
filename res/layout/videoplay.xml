@@ -5,7 +5,7 @@
 
     <io.vov.vitamio.widget.CenterLayout
             android:orientation="vertical" android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" android:layout_gravity="center|left">
         <io.vov.vitamio.widget.VideoView
                 android:id="@+id/surface_view" android:layout_width="match_parent"
                 android:layout_height="match_parent" android:layout_centerHorizontal="true"

@@ -23,6 +23,8 @@
             android:textColor="#4767a5"
             android:layout_gravity="center"
             android:textSize="13dp" android:textStyle="bold" android:textIsSelectable="false"/>
+        <TextView android:id="@+id/TimeSpan"  android:layout_width="0px"  android:layout_height="0px"/>
+        <TextView android:id="@+id/CurrentDate"  android:layout_width="0px"  android:layout_height="0px"/>
     </LinearLayout>
 
 </LinearLayout>
